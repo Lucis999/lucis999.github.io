@@ -1,0 +1,313 @@
+[
+  {
+    "id": "eeg",
+    "title": "EEG Signal Classification",
+    "theme": "eeg",
+    "cover": "Reading<br>the signal.",
+    "label": "EEG DATA ANALYSIS",
+    "category": "Signal & Pattern",
+    "status": "Academic hackathon project",
+    "course": "Virtual BR41N.IO Hackathon",
+    "summary": "Exploring patterns in EEG signals through data analysis and K-nearest neighbors classification.",
+    "skills": [
+      "EEG analysis",
+      "KNN",
+      "Classification"
+    ],
+    "overview": "An academic hackathon project exploring the classification of EEG signals. The project brings together signal data analysis and K-nearest neighbors classification.",
+    "sections": [
+      {
+        "title": "Project context",
+        "text": "Developed through participation in the Virtual BR41N.IO Hackathon. The focus was on exploring patterns in brain-signal data and applying a classification approach."
+      },
+      {
+        "title": "Analysis approach",
+        "items": [
+          "Explore EEG data as the input to a classification problem.",
+          "Apply K-nearest neighbors to investigate signal patterns."
+        ]
+      },
+      {
+        "title": "Evidence and evaluation",
+        "text": "Detailed methods, evaluation results and supporting visuals will be added when the project materials are reviewed."
+      }
+    ],
+    "contribution": "Specific responsibilities and individual contributions will be added after review.",
+    "pending": [
+      "Individual contribution",
+      "Evaluation setup and final results",
+      "Project visuals and demo link"
+    ]
+  },
+  {
+    "id": "home-affordability",
+    "title": "Home Affordability Calculator",
+    "theme": "housing",
+    "cover": "A place.<br>A plan.",
+    "label": "HOUSING & DECISIONS",
+    "category": "Finance & Planning",
+    "status": "Spreadsheet assignment · Planned interactive rebuild",
+    "course": "COMM 445",
+    "summary": "Spreadsheet-based housing affordability and rent-versus-buy analysis, with an interactive calculator planned.",
+    "skills": [
+      "Financial modeling",
+      "Spreadsheet analysis",
+      "Decision-support design"
+    ],
+    "overview": "A housing affordability and rent-versus-buy assignment built in a spreadsheet. It considers mortgage payments, debt, savings and housing costs as inputs to a financial decision. The next stage is a planned rebuild into an interactive calculator; a finished web application is not yet available.",
+    "sections": [
+      {
+        "title": "The decision",
+        "text": "Housing decisions involve several connected financial commitments. This assignment examines affordability alongside the comparison between renting and buying, keeping mortgage payments, existing debt, savings and housing costs in the same decision framework."
+      },
+      {
+        "title": "What the spreadsheet covers",
+        "items": [
+          "Mortgage payments as a recurring housing commitment.",
+          "Debt and savings as part of the affordability picture.",
+          "Housing costs in the rent-versus-buy comparison.",
+          "Spreadsheet analysis as a way to organize assumptions and examine financial decisions."
+        ]
+      },
+      {
+        "title": "Planned interactive rebuild",
+        "text": "The proposed rebuild would turn the spreadsheet’s decision framework into a calculator with explicit inputs and readable outputs. The interface, calculations and assumptions still need to be specified and validated before a working demo can be presented.",
+        "items": [
+          "Define the input fields and explain how each affects the comparison.",
+          "Organize outputs around affordability and rent-versus-buy questions.",
+          "Make assumptions visible so scenarios can be compared consistently.",
+          "Check the rebuilt calculations against the spreadsheet before publishing results."
+        ]
+      },
+      {
+        "title": "Current status and limitations",
+        "text": "The existing work is a spreadsheet assignment. The interactive experience, final validation results and public demo remain planned. No current affordability recommendation or verified calculator output is presented here."
+      }
+    ],
+    "contribution": "Individual responsibilities in the original assignment and the planned rebuild will be added here.",
+    "pending": [
+      "Individual contribution",
+      "Calculation specifications and assumptions",
+      "Validation results",
+      "Interactive demo link"
+    ]
+  },
+  {
+    "id": "cgi",
+    "title": "CGI Equity Valuation",
+    "theme": "equity",
+    "cover": "Value.<br>In context.",
+    "label": "EQUITY VALUATION",
+    "category": "Business & Valuation",
+    "status": "Five-person team project · Retrospective 2020 case",
+    "course": "COMM 445",
+    "summary": "A five-person team equity research case using 2020 information, financial ratios, DCF and sensitivity analysis.",
+    "skills": [
+      "Company analysis",
+      "Financial ratios",
+      "DCF valuation",
+      "Sensitivity analysis"
+    ],
+    "overview": "A five-person team equity research project examining CGI through company and industry analysis, financial ratios, discounted cash flow valuation and sensitivity analysis. It is a retrospective academic case based on 2020 information.",
+    "sections": [
+      {
+        "title": "Case context",
+        "text": "The project connects a business assessment with a valuation framework. Company and industry analysis provide context for interpreting financial ratios and DCF assumptions. All findings belong to the academic case and its 2020 information set."
+      },
+      {
+        "title": "Research and valuation scope",
+        "items": [
+          "Company analysis to understand the business within the case context.",
+          "Industry analysis to frame the operating environment.",
+          "Financial ratios to examine the company’s financial characteristics.",
+          "Discounted cash flow valuation to translate assumptions into a valuation estimate.",
+          "Sensitivity analysis to examine how valuation changes when assumptions change."
+        ]
+      },
+      {
+        "title": "Team setting",
+        "text": "The work was completed by a team of five. The analysis described on this page reflects the team project. My specific responsibilities, deliverables and contribution to the final work are still to be documented."
+      },
+      {
+        "title": "Interpretation and limitations",
+        "text": "Valuation depends on the information available and the assumptions selected. This case does not provide a current company assessment, current target price or investment recommendation. Its value as a portfolio project is the research and decision-support process."
+      },
+      {
+        "title": "Portfolio development",
+        "text": "A future presentation can make the link between business context, model assumptions and sensitivity results easier to inspect. Any reconstructed visuals or results will need to retain the 2020 case date and distinguish the team’s analysis from my individual contribution."
+      }
+    ],
+    "contribution": "To be added: my role within the five-person team, the sections or model components I worked on, and the deliverables I personally prepared.",
+    "pending": [
+      "Individual contribution",
+      "Retrospective valuation visuals",
+      "Assumptions and sensitivity results"
+    ]
+  },
+  {
+    "id": "treasury",
+    "title": "U.S. Treasury Yield Analysis",
+    "theme": "treasury",
+    "cover": "Patterns<br>over time.",
+    "label": "YIELDS & FORECASTS",
+    "category": "Time & Uncertainty",
+    "status": "Academic time-series project",
+    "course": "STAT 457",
+    "summary": "Analysis of U.S. 10-year Treasury yields across recession periods using ARIMA/SARIMA forecasting in R.",
+    "skills": [
+      "R",
+      "Time-series modeling",
+      "ARIMA / SARIMA",
+      "Forecast evaluation"
+    ],
+    "overview": "A time-series project analyzing U.S. 10-year Treasury yields across recession periods and using ARIMA/SARIMA forecasting. The project combines statistical modeling in R with economic interpretation and forecast evaluation.",
+    "sections": [
+      {
+        "title": "Analysis question",
+        "text": "The project examines how the yield series behaves across recession periods and how time-series models can be used to forecast it. The emphasis is on describing the series, modeling its temporal structure and interpreting forecasts in an economic context."
+      },
+      {
+        "title": "Methods and tools",
+        "items": [
+          "R for the time-series analysis and modeling workflow.",
+          "U.S. 10-year Treasury yields as the series under study.",
+          "Recession periods as context for examining historical behavior.",
+          "ARIMA and SARIMA as forecasting approaches.",
+          "Forecast evaluation and economic interpretation as parts of the analysis."
+        ]
+      },
+      {
+        "title": "Model comparison",
+        "text": "A dedicated comparison area is reserved for model specifications, evaluation windows and forecast results. No winning model, accuracy improvement or numerical performance claim is made until those results are added and checked."
+      },
+      {
+        "title": "Interpretation and limitations",
+        "text": "This is an academic analysis of a historical yield series. Forecasts depend on the model specification and evaluation period. The project is not presented as a current interest-rate outlook or financial recommendation."
+      },
+      {
+        "title": "Notebook and reproducibility",
+        "text": "A notebook can provide a readable record of the data preparation, model specifications, evaluation approach and interpretation. The notebook link and final model-comparison results are still to be added."
+      }
+    ],
+    "contribution": "My specific responsibilities, analytical decisions and deliverables will be added here.",
+    "pending": [
+      "Individual contribution",
+      "Notebook link",
+      "Model specifications and comparison results",
+      "Evaluation windows and forecast visuals"
+    ]
+  },
+  {
+    "id": "oil",
+    "title": "WTI Crude Oil Market Model",
+    "theme": "oil",
+    "cover": "Beyond<br>the price.",
+    "label": "EXPLORATORY MARKET MODEL",
+    "category": "Markets & Models",
+    "status": "Exploratory academic modeling",
+    "course": "MATH 377",
+    "summary": "Exploratory WTI analysis alongside VIX, trading volume and shipping indicators, using Lotka–Volterra-inspired modeling and Bollinger Bands.",
+    "skills": [
+      "Mathematical modeling",
+      "Exploratory analysis",
+      "Lotka–Volterra",
+      "Bollinger Bands"
+    ],
+    "overview": "An academic modeling project exploring WTI crude oil prices alongside VIX, trading volume and shipping indicators. It uses Lotka–Volterra-inspired modeling and Bollinger Bands as exploratory ways to examine market behavior.",
+    "sections": [
+      {
+        "title": "Research scope",
+        "text": "The project considers WTI prices in a wider market setting by examining volatility, trading activity and shipping indicators alongside the price series. These inputs provide an exploratory framework for studying patterns rather than establishing a causal explanation."
+      },
+      {
+        "title": "Modeling approach",
+        "items": [
+          "WTI prices as the central market series.",
+          "VIX, trading volume and shipping indicators as additional series explored alongside WTI.",
+          "Lotka–Volterra-inspired modeling to explore interacting market dynamics.",
+          "Bollinger Bands as an additional lens for examining price behavior."
+        ]
+      },
+      {
+        "title": "Validation space",
+        "text": "A dedicated area is reserved for model validation, fit diagnostics and sensitivity checks. Final validation results have not been provided for this portfolio page, so the model is not described as validated or as outperforming a benchmark."
+      },
+      {
+        "title": "Limitations",
+        "items": [
+          "Patterns between market series do not by themselves establish causality.",
+          "An exploratory model does not demonstrate profitable trading performance.",
+          "Results depend on model assumptions and the data window; those details still need to be documented.",
+          "The project does not present a live trading strategy or current oil-price recommendation."
+        ]
+      },
+      {
+        "title": "Next development step",
+        "text": "The next version can document model assumptions, add validation evidence and present the limitations beside the results. The goal is to make the reasoning and uncertainty inspectable before drawing stronger conclusions."
+      }
+    ],
+    "contribution": "My individual modeling, analysis and reporting contributions will be added here.",
+    "pending": [
+      "Individual contribution",
+      "Data windows and model assumptions",
+      "Model validation and diagnostics",
+      "Limitations and model visuals"
+    ]
+  },
+  {
+    "id": "paqt",
+    "title": "PAQT Digital Signature Workflow",
+    "theme": "paqt",
+    "cover": "From draft<br>to signed.",
+    "label": "DIGITAL SIGNATURE WORKFLOW",
+    "category": "Process & Trust",
+    "status": "Team project · Workflow tested",
+    "course": "INCS 870 · Graduate capstone",
+    "summary": "A team project integrating a tested end-to-end signing and email workflow into a startup platform.",
+    "skills": [
+      "Process design",
+      "System integration",
+      "Security controls",
+      "End-to-end testing"
+    ],
+    "overview": "A team project integrating an end-to-end digital-signature workflow into a startup platform. The work included signing and email functionality, and the workflow was tested. This project connects process design, system integration, security considerations and testing within a graduate capstone collaboration.",
+    "sections": [
+      {
+        "title": "Project context",
+        "text": "The collaboration focused on adding a digital signing process to an existing startup platform. PAQT was based in Toronto, while I participated remotely from Vancouver through the NYIT graduate capstone."
+      },
+      {
+        "title": "Workflow and integration",
+        "items": [
+          "Design an end-to-end process for the platform’s digital-signature workflow.",
+          "Integrate signing functionality into the existing platform.",
+          "Include email functionality as part of the overall workflow.",
+          "Test the connected workflow to verify that the process worked end to end."
+        ]
+      },
+      {
+        "title": "Testing and evidence",
+        "text": "The signing and email workflow was tested. The test scenarios, acceptance criteria and detailed results are still to be documented here. No test coverage percentage or broader production-reliability claim is made."
+      },
+      {
+        "title": "Security controls",
+        "text": "Security controls are a focus for documenting the signing integration. The specific controls implemented and their verification evidence still need to be added; no particular cryptographic mechanism, access-control design or compliance certification is claimed on this page."
+      },
+      {
+        "title": "Team contribution",
+        "text": "The workflow was developed as a team project. My exact responsibilities and the components I personally designed, integrated or tested will be added separately from the team’s overall deliverable."
+      },
+      {
+        "title": "Public demonstration",
+        "text": "A public-safe workflow diagram or demo can be added once available. The portfolio presents the process and contributions without exposing credentials, private endpoints, certificates or sensitive deployment configuration."
+      }
+    ],
+    "contribution": "To be added: my responsibilities within the team, the workflow components I worked on, and my contribution to integration and testing.",
+    "pending": [
+      "Individual contribution",
+      "Test scenarios and final validation details",
+      "Verified security controls",
+      "Public-safe workflow diagram or demo link"
+    ]
+  }
+]
