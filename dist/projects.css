@@ -23,3 +23,25 @@
 .road-feature-visuals{display:grid;grid-template-columns:1fr;gap:10px}
 .road-feature-visuals figure{background:#eef5f9}
 @media(max-width:750px){.case-study:has(.roadsafety){padding:0 14px 24px}.road-feature-links{gap:8px}.road-feature-links a{font-size:11px}.road-feature figure{padding:6px}.case-study:has(.roadsafety) .cover{height:250px}}
+
+
+/* Road safety detail: constrain every visual to the centred reading column. */
+body:has(.road-feature) main{width:100%;max-width:1240px;margin-inline:auto;padding-inline:clamp(16px,4vw,60px)}
+body:has(.road-feature) .case-study{box-sizing:border-box;width:100%;max-width:850px;min-width:0;margin-inline:auto;overflow:hidden}
+body:has(.road-feature) .case-study>*{max-width:100%;min-width:0}
+body:has(.road-feature) .road-feature{box-sizing:border-box;width:100%;max-width:100%;min-width:0;overflow:hidden}
+body:has(.road-feature) .road-feature-links{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:stretch;gap:10px;width:100%;max-width:100%;min-width:0}
+body:has(.road-feature) .road-feature-links a{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;text-align:center;flex:0 1 auto;max-width:100%;min-width:0;overflow-wrap:anywhere;white-space:normal;line-height:1.5;padding:10px 14px}
+body:has(.road-feature) .road-feature figure{box-sizing:border-box;display:block;width:100%;max-width:100%;min-width:0;margin:0 0 18px;overflow:hidden}
+body:has(.road-feature) .road-feature figure img{display:block;width:100%;max-width:100%;height:auto;object-fit:contain}
+body:has(.road-feature) .road-feature-visuals{display:grid;grid-template-columns:minmax(0,1fr);width:100%;max-width:100%;min-width:0;gap:4px}
+body:has(.road-feature) .road-feature-visuals figure{min-width:0}
+body:has(.road-feature) .project-pagination{width:100%;max-width:100%;min-width:0;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+body:has(.road-feature) .project-pagination a{min-width:0;overflow-wrap:anywhere}
+@media(max-width:620px){
+ body:has(.road-feature) main{padding-inline:12px}
+ body:has(.road-feature) .case-study{padding-inline:15px}
+ body:has(.road-feature) .road-feature-links{display:grid;grid-template-columns:minmax(0,1fr);gap:9px}
+ body:has(.road-feature) .road-feature-links a{width:100%;justify-content:center}
+ body:has(.road-feature) .road-feature figure{padding:6px;border-radius:8px}
+}
