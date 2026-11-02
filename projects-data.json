@@ -1,5 +1,51 @@
 [
   {
+    "id": "road-safety",
+    "title": "Vancouver Road Safety Analytics",
+    "theme": "roadsafety",
+    "cover": "Mapping<br>the patterns.",
+    "label": "GEOSPATIAL DATA ANALYTICS",
+    "category": "Data & Geospatial",
+    "status": "Featured · Live dashboard · v1.0.0",
+    "course": "UBC Sauder · Analytics portfolio extension",
+    "summary": "An interactive Vancouver road-safety dashboard integrating 2.47M parking tickets with ICBC collision data and geographic quality checks.",
+    "skills": [
+      "Python ETL",
+      "Geospatial matching",
+      "Folium / Leaflet",
+      "Data quality"
+    ],
+    "overview": "An end-to-end geospatial analytics project connecting City of Vancouver parking violations (2020–2025), the municipal road network, and ICBC collision data (2021–2025). The workflow standardizes source records, performs approximate geographic matching, audits data quality, and presents road-level patterns through a published interactive dashboard.",
+    "sections": [
+      {
+        "title": "Research question",
+        "text": "How do parking enforcement patterns, changes across years, and approximate collision locations vary across Vancouver roads? The goal is exploratory understanding, not a causal or exposure-adjusted road safety ranking."
+      },
+      {
+        "title": "Data engineering and geographic matching",
+        "items": [
+          "Normalize street and block identifiers across 2,472,917 input parking-ticket records.",
+          "Use official road geometry for street-range matching and approximate ICBC collision location assignment.",
+          "Audit accepted, excluded, unmatched and ambiguous records before generating analysis-ready tables."
+        ]
+      },
+      {
+        "title": "Dashboard and interaction",
+        "items": [
+          "Explore parking, collision and comparison analysis layers with multi-year filters.",
+          "Inspect highlighted road segments, infraction types and road-level change.",
+          "Select a location and radius to examine nearby collision counts, severity and involvement categories."
+        ]
+      },
+      {
+        "title": "Validation and limits",
+        "text": "A local end-to-end rebuild passed 37 checks with zero failures, one CDN-related warning and one browser-interactivity check skipped by static QA. Raw ticket and collision counts are not normalized by traffic, parking exposure or enforcement intensity; geographic matches are approximate."
+      }
+    ],
+    "contribution": "Built Python data cleaning and geographic matching for the original group parking analysis and implemented its interactive Folium map. The later ICBC integration and v12-series dashboard are subsequent extensions; the project documentation distinguishes the academic team contribution from later development.",
+    "pending": []
+  },
+  {
     "id": "eeg",
     "title": "EEG Signal Classification",
     "theme": "eeg",
