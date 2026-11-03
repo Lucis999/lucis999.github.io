@@ -5,8 +5,8 @@ const border=flagDefs.append('linearGradient').attr('id','visited-border').attr(
 const flagTune={
 'China':{center:[102,36],width:.8,anchor:[.30,.28],base:'#ee1c25'},
 'Canada':{center:[-105,58],width:.80,anchor:[.5,.5],base:'#fff'},
-'Japan':{center:[137.8,36.4],width:.44,anchor:[.5,.5],base:'#fff'},
-'South Korea':{center:[127.7,36.3],width:.78,anchor:[.5,.5],base:'#fff'},
+'Japan':{center:[138,36.7],width:.20,anchor:[.5,.5],base:'#fff'},
+'South Korea':{center:[127.7,36.3],width:.66,anchor:[.5,.5],base:'#fff'},
 'Taiwan':{center:[121,23.9],width:.95,anchor:[.29,.25],base:'red'}
 };
 function drawFlagPatterns(path){
