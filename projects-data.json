@@ -89,11 +89,11 @@
     "id": "home-affordability",
     "title": "Mortgage Financial Planner",
     "theme": "housing",
-    "cover": "A place.<br>A plan.",
+    "cover": "Before<br>You Buy.",
     "label": "HOUSING & DECISIONS",
     "category": "Finance & Planning",
     "status": "Interactive prototype · v2.4.2",
-    "course": "Personal analytics extension · Original context: COMM 445",
+    "course": "Interactive financial decision support",
     "summary": "Explore mortgage qualification, lifestyle-preserving affordability, rent-versus-buy outcomes and financial resilience in one interactive Python application.",
     "skills": [
       "Python / Streamlit",
@@ -112,7 +112,7 @@
         "text": "The v2.4.2 GitHub Actions run passed all 70 automated tests on Ubuntu and Windows with Python 3.10 and 3.12. These regression checks cover calculation behavior and selected interface structure; they do not establish lending-policy compliance or forecast accuracy."
       }
     ],
-    "contribution": "The original COMM 445 spreadsheet provides the academic context. The subsequent portfolio extension combines the Python calculation model, shared scenario workflow, interactive visualizations, decision pathways, automated tests and publishing documentation. The repository provides the implementation and model assumptions for review.",
+    "contribution": "Developed the planner through iterative financial modeling, interface design and scenario testing. The project combines Python calculation modules, a shared scenario workflow, interactive visualizations, conditional decision pathways, regression tests and publishing documentation.",
     "pending": [],
     "liveUrl": "https://lucis-mortgage-planner.streamlit.app/"
   },
@@ -124,7 +124,7 @@
     "label": "EQUITY VALUATION",
     "category": "Business & Valuation",
     "status": "Five-person team project · Retrospective 2020 case",
-    "course": "COMM 445",
+    "course": "Academic equity research project",
     "summary": "A five-person team equity research case using 2020 information, financial ratios, DCF and sensitivity analysis.",
     "skills": [
       "Company analysis",
