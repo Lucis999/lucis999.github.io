@@ -19,11 +19,11 @@ if(!(bw>0&&bh>0))return;
 const pattern=flagDefs.append('pattern').attr('id',id).attr('patternUnits','userSpaceOnUse').attr('x',x).attr('y',y).attr('width',bw).attr('height',bh);
 const tune=flagTune[f.properties.name];
 if(tune){
-pattern.append('rect').attr('x',x).attr('y',y).attr('width',bw).attr('height',bh).attr('fill',tune.base);
+pattern.append('rect').attr('x',0).attr('y',0).attr('width',bw).attr('height',bh).attr('fill',tune.base);
 const size=bw*tune.width,height=size*.75,point=projection(tune.center);
-pattern.append('image').attr('x',point[0]-size*tune.anchor[0]).attr('y',point[1]-height*tune.anchor[1]).attr('width',size).attr('height',height).attr('preserveAspectRatio','xMidYMid meet').attr('href','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(asset.svg));
+pattern.append('image').attr('x',point[0]-x-size*tune.anchor[0]).attr('y',point[1]-y-height*tune.anchor[1]).attr('width',size).attr('height',height).attr('preserveAspectRatio','xMidYMid meet').attr('href','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(asset.svg));
 }else{
-pattern.append('image').attr('x',x).attr('y',y).attr('width',bw).attr('height',bh).attr('preserveAspectRatio','none').attr('href','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(asset.svg));
+pattern.append('image').attr('x',0).attr('y',0).attr('width',bw).attr('height',bh).attr('preserveAspectRatio','none').attr('href','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(asset.svg));
 }
 });
 }
