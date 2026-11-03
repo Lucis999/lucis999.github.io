@@ -9,3 +9,6 @@ body{isolation:isolate;background:#050e1d}main{max-width:none;padding:0 4vw;posi
 /* Outline countries represented in the confirmed travel list. */
 .country.visited-country{stroke:#a8ead8;stroke-width:1.35;stroke-opacity:.95;fill:#153347}
 .country.visited-country:hover{stroke:#d5fff1;stroke-width:1.7}
+
+/* Flags remain visible beneath the city markers without lighting up the whole map. */
+.country.visited-country{fill-opacity:.46;stroke:#b9efdf;stroke-width:1.45}.country.visited-country:hover{fill-opacity:.62}.pin circle.core{fill:#e0fff5;stroke:#051421;stroke-width:1.8}.pin text{fill:#edfff9;stroke:#051421;stroke-width:4}
