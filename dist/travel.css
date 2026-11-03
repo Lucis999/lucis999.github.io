@@ -5,3 +5,7 @@ body{isolation:isolate;background:#050e1d}main{max-width:none;padding:0 4vw;posi
 
 /* Uniform geography: no country or region highlighting. */
 .country,.country.canada{fill:#153347;stroke:#6b9eaf66}.pin circle.core{fill:#b9d8d5;stroke:#122d3d;stroke-width:1.2}.pin .halo{display:none}.city-panel{max-height:65vh;overflow:auto;overscroll-behavior:contain;scrollbar-color:#4c777f #0c2134}.place-group{margin-top:12px;padding-top:12px}.place-group summary{color:#b9d8d5;font-size:13px}.place-group .city-choice{padding:9px 12px;font-size:13px;margin-top:6px}.place-group:has(.selected){border-color:#84aaa9}.city-choice.selected{border-color:#84aaa9;box-shadow:none;background:#173440}.legend i{box-shadow:none}.photo-slot{display:none}@media(max-width:750px){.city-panel{max-height:52vh}}
+
+/* Outline countries represented in the confirmed travel list. */
+.country.visited-country{stroke:#a8ead8;stroke-width:1.35;stroke-opacity:.95;fill:#153347}
+.country.visited-country:hover{stroke:#d5fff1;stroke-width:1.7}
