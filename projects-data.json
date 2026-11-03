@@ -87,56 +87,34 @@
   },
   {
     "id": "home-affordability",
-    "title": "Home Affordability Calculator",
+    "title": "Mortgage Financial Planner",
     "theme": "housing",
     "cover": "A place.<br>A plan.",
     "label": "HOUSING & DECISIONS",
     "category": "Finance & Planning",
-    "status": "Spreadsheet assignment · Planned interactive rebuild",
-    "course": "COMM 445",
-    "summary": "Spreadsheet-based housing affordability and rent-versus-buy analysis, with an interactive calculator planned.",
+    "status": "Interactive prototype · v2.4.2",
+    "course": "Personal analytics extension · Original context: COMM 445",
+    "summary": "Explore mortgage qualification, lifestyle-preserving affordability, rent-versus-buy outcomes and financial resilience in one interactive Python application.",
     "skills": [
+      "Python / Streamlit",
       "Financial modeling",
-      "Spreadsheet analysis",
-      "Decision-support design"
+      "Plotly visualization",
+      "Scenario analysis"
     ],
-    "overview": "A housing affordability and rent-versus-buy assignment built in a spreadsheet. It considers mortgage payments, debt, savings and housing costs as inputs to a financial decision. The next stage is a planned rebuild into an interactive calculator; a finished web application is not yet available.",
+    "overview": "Developed from a housing affordability spreadsheet concept into an eight-page decision-support prototype for British Columbia. The planner separates purchase capital, income screening, monthly cash flow and protected savings, then explores how a purchase could change liquidity and long-term net worth.",
     "sections": [
       {
-        "title": "The decision",
-        "text": "Housing decisions involve several connected financial commitments. This assignment examines affordability alongside the comparison between renting and buying, keeping mortgage payments, existing debt, savings and housing costs in the same decision framework."
+        "title": "Model and implementation",
+        "text": "Python calculation modules support a Streamlit interface with shared scenario inputs, Plotly charts and OpenPyXL exports. Canadian mortgage interest is converted from a nominal semiannual rate to an effective monthly rate. The affordability scan searches candidate prices in CAD 1,000 increments up to CAD 2.5 million."
       },
       {
-        "title": "What the spreadsheet covers",
-        "items": [
-          "Mortgage payments as a recurring housing commitment.",
-          "Debt and savings as part of the affordability picture.",
-          "Housing costs in the rent-versus-buy comparison.",
-          "Spreadsheet analysis as a way to organize assumptions and examine financial decisions."
-        ]
-      },
-      {
-        "title": "Planned interactive rebuild",
-        "text": "The proposed rebuild would turn the spreadsheet’s decision framework into a calculator with explicit inputs and readable outputs. The interface, calculations and assumptions still need to be specified and validated before a working demo can be presented.",
-        "items": [
-          "Define the input fields and explain how each affects the comparison.",
-          "Organize outputs around affordability and rent-versus-buy questions.",
-          "Make assumptions visible so scenarios can be compared consistently.",
-          "Check the rebuilt calculations against the spreadsheet before publishing results."
-        ]
-      },
-      {
-        "title": "Current status and limitations",
-        "text": "The existing work is a spreadsheet assignment. The interactive experience, final validation results and public demo remain planned. No current affordability recommendation or verified calculator output is presented here."
+        "title": "Validation and reproducibility",
+        "text": "The v2.4.2 GitHub Actions run passed all 70 automated tests on Ubuntu and Windows with Python 3.10 and 3.12. These regression checks cover calculation behavior and selected interface structure; they do not establish lending-policy compliance or forecast accuracy."
       }
     ],
-    "contribution": "Individual responsibilities in the original assignment and the planned rebuild will be added here.",
-    "pending": [
-      "Individual contribution",
-      "Calculation specifications and assumptions",
-      "Validation results",
-      "Interactive demo link"
-    ]
+    "contribution": "The original COMM 445 spreadsheet provides the academic context. The subsequent portfolio extension combines the Python calculation model, shared scenario workflow, interactive visualizations, decision pathways, automated tests and publishing documentation. The repository provides the implementation and model assumptions for review.",
+    "pending": [],
+    "liveUrl": "https://lucis-mortgage-planner.streamlit.app/"
   },
   {
     "id": "cgi",
