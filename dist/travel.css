@@ -12,3 +12,6 @@ body{isolation:isolate;background:#050e1d}main{max-width:none;padding:0 4vw;posi
 
 /* Flags remain visible beneath the city markers without lighting up the whole map. */
 .country.visited-country{fill-opacity:.46;stroke:#b9efdf;stroke-width:1.45}.country.visited-country:hover{fill-opacity:.62}.pin circle.core{fill:#e0fff5;stroke:#051421;stroke-width:1.8}.pin text{fill:#edfff9;stroke:#051421;stroke-width:4}
+
+/* A soft diagonal border, shared across each independently fitted silhouette. */
+.country.visited-country,.country.visited-country:hover{stroke:url(#visited-border);stroke-width:1.5;stroke-linejoin:round}.country.visited-country{fill-opacity:.46}
