@@ -3,10 +3,10 @@ const flagDefs=svg.append('defs');
 const border=flagDefs.append('linearGradient').attr('id','visited-border').attr('x1','0%').attr('y1','0%').attr('x2','100%').attr('y2','100%');
 [[0,'#e0fff5'],[.32,'#82d9ce'],[.65,'#547ea8'],[1,'#bcf6df']].forEach(([offset,color])=>border.append('stop').attr('offset',offset).attr('stop-color',color));
 const flagTune={
-'China':{center:[102,36],width:.8,anchor:[.30,.28],base:'#ee1c25'},
+'China':{center:[96,37],width:.8,anchor:[.30,.28],base:'#ee1c25'},
 'Canada':{center:[-105,58],width:.80,anchor:[.5,.5],base:'#fff'},
 'Japan':{center:[138,36.7],width:.20,anchor:[.5,.5],base:'#fff'},
-'South Korea':{center:[127.7,36.3],width:.66,anchor:[.5,.5],base:'#fff'},
+'South Korea':{center:[127.7,36.3],width:.71,anchor:[.5,.5],base:'#fff'},
 'Taiwan':{center:[121,23.9],width:.95,anchor:[.29,.25],base:'red'}
 };
 function drawFlagPatterns(path){
@@ -18,9 +18,30 @@ const [[x,y],[right,bottom]]=path.bounds(f),bw=right-x,bh=bottom-y;
 if(!(bw>0&&bh>0))return;
 const pattern=flagDefs.append('pattern').attr('id',id).attr('patternUnits','userSpaceOnUse').attr('x',x).attr('y',y).attr('width',bw).attr('height',bh);
 const tune=flagTune[f.properties.name];
-if(tune){
+if(f.properties.name==='United States of America'){
+const alaska=f.flagKey==='us-alaska',cw=bw*(alaska?.34:.39),ch=bh*(alaska?.43:.46);
+for(let i=0;i<13;i++)pattern.append('rect').attr('x',0).attr('y',i*bh/13).attr('width',bw).attr('height',bh/13+.2).attr('fill',i%2?'#fff':'#bd3d44');
+pattern.append('rect').attr('width',cw).attr('height',ch).attr('fill','#192f5d');
+for(let row=0;row<9;row++){const count=row%2?5:6;for(let col=0;col<count;col++){
+const cx=cw*(col+(row%2?1:.5))/6,cy=ch*(row+.5)/9,r=Math.min(cw/6,ch/9)*.33;
+const points=Array.from({length:10},(_,i)=>{const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*.382:r;return (cx+Math.cos(a)*rr)+','+(cy+Math.sin(a)*rr)}).join(' ');
+pattern.append('polygon').attr('points',points).attr('fill','#fff');
+}}
+}else if(f.properties.name==='Japan'){
+pattern.append('rect').attr('width',bw).attr('height',bh).attr('fill','#fff');
+const point=projection([138.3,35.6]);let clearance=Infinity;
+const polys=f.geometry.type==='MultiPolygon'?f.geometry.coordinates:[f.geometry.coordinates];
+polys.forEach(poly=>poly.forEach(ring=>{for(let i=1;i<ring.length;i++){const a=projection(ring[i-1]),b=projection(ring[i]);const dx=b[0]-a[0],dy=b[1]-a[1],t=Math.max(0,Math.min(1,((point[0]-a[0])*dx+(point[1]-a[1])*dy)/(dx*dx+dy*dy||1)));clearance=Math.min(clearance,Math.hypot(point[0]-a[0]-t*dx,point[1]-a[1]-t*dy))}}));
+pattern.append('circle').attr('cx',point[0]-x).attr('cy',point[1]-y).attr('r',Math.min(bw*.045,clearance*.82)).attr('fill','#bc002d');
+}else if(tune){
 pattern.append('rect').attr('x',0).attr('y',0).attr('width',bw).attr('height',bh).attr('fill',tune.base);
 const size=bw*tune.width,height=size*.75,point=projection(tune.center);
+if(f.properties.name==='Canada'){
+const left=point[0]-x-size*.5,whiteLeft=left+size*(150.1/640),whiteRight=left+size*(489.8/640);
+pattern.append('rect').attr('x',0).attr('y',0).attr('width',Math.max(0,whiteLeft)).attr('height',bh).attr('fill','#d52b1e');
+pattern.append('rect').attr('x',whiteRight).attr('y',0).attr('width',Math.max(0,bw-whiteRight)).attr('height',bh).attr('fill','#d52b1e');
+}
+
 pattern.append('image').attr('x',point[0]-x-size*tune.anchor[0]).attr('y',point[1]-y-height*tune.anchor[1]).attr('width',size).attr('height',height).attr('preserveAspectRatio','xMidYMid meet').attr('href','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(asset.svg));
 }else{
 pattern.append('image').attr('x',0).attr('y',0).attr('width',bw).attr('height',bh).attr('preserveAspectRatio','none').attr('href','data:image/svg+xml;charset=utf-8,'+encodeURIComponent(asset.svg));
