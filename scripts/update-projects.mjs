@@ -47,10 +47,11 @@ for(const [i,p] of projects.entries()){
  }
  fs.writeFileSync(path.join(dist,href(p)),html);
 }
-for(const filename of ['index.html','projects.html']){
+for(const filename of ['index.html','projects.html','future.html']){
+ const visibleProjects=projects.filter(p=>filename==='future.html'?!['road-safety','home-affordability'].includes(p.id):['road-safety','home-affordability'].includes(p.id));
  let html=fs.readFileSync(path.join(dist,filename),'utf8');
- html=html.replace(/<div class="gallery-track">[\s\S]*?<\/div><\/div><div class="gallery-controls">/,`<div class="gallery-track">${projects.map(card).join('')}</div></div><div class="gallery-controls">`);
- html=html.replace(/class="gallery-status">[^<]+</,'class="gallery-status">01 / '+String(projects.length).padStart(2,'0')+'<');
+ html=html.replace(/<div class="gallery-track">[\s\S]*?<\/div><\/div><div class="gallery-controls">/,`<div class="gallery-track">${visibleProjects.map(card).join('')}</div></div><div class="gallery-controls">`);
+ html=html.replace(/class="gallery-status">[^<]+</,'class="gallery-status">01 / '+String(visibleProjects.length).padStart(2,'0')+'<');
  html=html.replace('status.textContent=`0${index+1} / 03`;','status.textContent=`${String(index+1).padStart(2,\'0\')} / ${String(cards.length).padStart(2,\'0\')}`;');
  if(!html.includes('href="projects.css"'))html=html.replace('</head>','<link href="projects.css" rel="stylesheet"/></head>');
  fs.writeFileSync(path.join(dist,filename),html);
