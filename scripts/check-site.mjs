@@ -8,7 +8,7 @@ for(const name of files){
  const html=fs.readFileSync(path.join(root,name),'utf8');
  for(const m of html.matchAll(/<script>([\s\S]*?)<\/script>/g))new vm.Script(m[1],{filename:name});
  for(const m of html.matchAll(/(?:href|src)="([^"#]+)(?:#[^"]*)?"/g)){
-  const target=m[1];if(/^(https?:|mailto:|data:)/.test(target))continue;
+  const target=m[1].split('?')[0];if(/^(https?:|mailto:|data:)/.test(target))continue;
   if(!fs.existsSync(path.resolve(root,target)))throw Error(`${name}: missing ${target}`);
  }
 }
