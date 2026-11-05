@@ -52,38 +52,28 @@
     "cover": "Reading<br>the signal.",
     "label": "EEG DATA ANALYSIS",
     "category": "Signal & Pattern",
-    "status": "Academic hackathon project",
+    "status": "2023 Hackathon · Interactive case study",
     "course": "Virtual BR41N.IO Hackathon",
-    "summary": "Exploring patterns in EEG signals through data analysis and K-nearest neighbors classification.",
+    "summary": "An interactive P300 brain–computer interface case study with historical EEG evidence, GRU exploration and a brain-typing simulation.",
     "skills": [
-      "EEG analysis",
-      "KNN",
-      "Classification"
+      "EEG / P300",
+      "Signal processing",
+      "GRU",
+      "Python"
     ],
-    "overview": "An academic hackathon project exploring the classification of EEG signals. The project brings together signal data analysis and K-nearest neighbors classification.",
+    "overview": "A 2023 BR41N.IO experiment exploring whether EEG responses to flashing rows and columns could identify an attended character. The browser experience is a later educational simulation, separate from historical model inference.",
     "sections": [
       {
-        "title": "Project context",
-        "text": "Developed through participation in the Virtual BR41N.IO Hackathon. The focus was on exploring patterns in brain-signal data and applying a classification approach."
+        "title": "Interactive case study",
+        "text": "Explore the brain-typing simulation, four-step P300 explanation, historical EEG visualizations and original hackathon archive in the linked case study."
       },
       {
-        "title": "Analysis approach",
-        "items": [
-          "Explore EEG data as the input to a classification problem.",
-          "Apply K-nearest neighbors to investigate signal patterns."
-        ]
-      },
-      {
-        "title": "Evidence and evaluation",
-        "text": "Detailed methods, evaluation results and supporting visuals will be added when the project materials are reviewed."
+        "title": "Evaluation limits",
+        "text": "Saved code confirms GRU implementations. Historical metrics have not been independently reproduced or tied to an exact GRU configuration. No controlled GRU/LSTM speed or accuracy comparison was established."
       }
     ],
-    "contribution": "Specific responsibilities and individual contributions will be added after review.",
-    "pending": [
-      "Individual contribution",
-      "Evaluation setup and final results",
-      "Project visuals and demo link"
-    ]
+    "contribution": "Processed EEG recordings, explored GRU-based classifiers, and investigated prediction performance and processing time alongside the team.",
+    "pending": []
   },
   {
     "id": "home-affordability",
