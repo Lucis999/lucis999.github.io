@@ -1,8 +1,8 @@
 'use strict';
-function scrollResearchTarget(el){if(el)window.scrollTo({top:Math.max(0,el.getBoundingClientRect().top+window.scrollY-(document.body.classList.contains('portfolio-embedded')?document.querySelector('nav').offsetHeight+16:0)),behavior:'auto'});}
 const R=window.RESEARCH,$=id=>document.getElementById(id),fmt=(n,d=2)=>Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d}),money=n=>'$'+fmt(n),views=['overview','research','reliability','shipping'];let active='overview';
 $('lastPrice').textContent=money(R.last_wti);$('origin').textContent='Observation date / '+R.forecast_origin;
-function show(v){const original=v,aliases={story:'overview',market:'overview',model:'research',test:'research',scenario:'research',robust:'reliability',intervals:'reliability'};v=aliases[v]||v;active=v;history.replaceState(null,'','#'+v);document.querySelectorAll('.view').forEach(e=>e.hidden=e.id!==v);document.querySelectorAll('nav button').forEach(e=>e.classList.toggle('active',e.dataset.view===v));if(v==='overview')market();if(v==='research'){odeChart();backtest();scenario();if(typeof renderExtension==='function')renderExtension();}if(v==='reliability'){robustness();intervalLab();}if(v==='shipping')shippingLab();if(original!==v)scrollResearchTarget($(original));else scrollResearchTarget($(v));}
+function scrollResearchTarget(el){if(!el)return;if(document.body.classList.contains('portfolio-flow')){parent.postMessage({type:'oil-flow-scroll',id:el.id},location.origin);}else window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-20,behavior:'auto'});}
+function show(v){const aliases={story:'overview',research:'test',reliability:'intervals'};v=aliases[v]||v;active=v;history.replaceState(null,'','#'+v);scrollResearchTarget($(v));}
 
 document.querySelectorAll('[data-view]').forEach(e=>e.onclick=()=>show(e.dataset.view));document.querySelectorAll('[data-go]').forEach(e=>e.onclick=()=>show(e.dataset.go));
 $('present').onclick=()=>{document.body.classList.toggle('present');$('present').textContent=document.body.classList.contains('present')?'Exit presentation ↙':'Present ↗';};

@@ -213,45 +213,27 @@
   },
   {
     "id": "oil",
-    "title": "WTI Oil Research: Evidence & Uncertainty",
+    "title": "New Wave: Crude Oil Pricing Research",
     "theme": "oil",
     "cover": "Beyond<br>the price.",
     "label": "2020 IDEA / 2026 EVIDENCE",
     "category": "Markets & Models",
-    "status": "Interactive research exhibit · 2020–2026",
-    "course": "MATH 377 · RESEARCH RECONSTRUCTION",
-    "summary": "A 2020 oil-market question rebuilt with official data through November 2026, fair forecast comparisons, explicit uncertainty and an interactive shipping-and-inventory lab.",
+    "status": "Interactive oil research · 2020–2026",
+    "course": "MATHEMATICAL MODELING",
+    "summary": "Follow oil from shipping routes to storage and daily life, then explore price assumptions and the limits of forecasting.",
     "skills": [
-      "Research audit",
-      "Python modeling",
-      "Forecast evaluation",
-      "Interactive visualization"
+      "Market mechanisms",
+      "Price scenarios",
+      "Model evaluation"
     ],
     "overview": "This project revisits an undergraduate question about fear, trading and shipping during the 2020 oil collapse, then builds a narrower empirical test: can a price forecast improve on keeping today's price? The extension includes 2026 market stress, with frozen official EIA and Cboe observations, chronological backtests and explicit distinctions between verified data, assumptions and forecasts.",
     "sections": [
       {
-        "title": "Research value",
-        "text": "The contribution is a transparent research process: preserve the original question, correct mathematical and code errors, build reproducible tests and communicate unsuccessful results alongside improvements. A credible negative result helps identify where extra model complexity has not earned its place."
-      },
-      {
-        "title": "What the model comparisons found",
-        "text": "Five original models and six added candidates are compared on identical original forecast dates. The added study contains 6,810 predictions. Some full-sample errors fall by about 0.33% at one observed-price step and 0.85% at sixty, but both exploratory uncertainty ranges include no improvement. No added candidate improves the twenty-step comparison. These are small retrospective differences, not an established forecasting edge."
-      },
-      {
-        "title": "What changed in 2026",
-        "text": "The exhibit separately evaluates 2026 forecast dates and prediction ranges. At five observed prices ahead, the earlier range catches 24 of 41 outcomes; the rule selected from older scores catches 37. Mean width rises from $13.06 to $26.51 per barrel. Longer horizons remain difficult, and 2026 had already been inspected when the repair was designed."
-      },
-      {
-        "title": "Original idea, empirical tests and mechanism",
-        "text": "The original fear-volume equations remain an audited hypothesis: their claimed stable recovery was not established, and defensible volume and shipping inputs were insufficient to fit that system. The estimated price-change models answer a separate prediction question. Shipping Lab illustrates an assumed physical mechanism and does not validate either forecasting or the original equations."
-      },
-      {
-        "title": "Limitations and next evidence",
+        "title": "Limitations & next evidence",
         "items": [
-          "Revised historical data and assumed publication delays do not recreate all information available at each past date.",
-          "Small historical model gains do not establish reliable future accuracy, causal explanations or trading profitability.",
-          "2026 is a partial-year, previously inspected sample; the study needs new timestamped forecasts issued before their outcomes.",
-          "Shipping, storage, refining and delivery are simplified assumptions. Tank percentages are not real measurements, and price-pressure labels are not pump-price forecasts."
+          "The price response and shipping buffer are assumed scenarios, not measured causal effects or live tank levels.",
+          "Small historical model gains remain uncertain. Wider prediction ranges do not guarantee future reliability.",
+          "The next test needs new forecasts recorded before their outcomes, using methods fixed in advance."
         ]
       }
     ],

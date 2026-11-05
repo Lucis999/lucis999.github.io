@@ -20,5 +20,5 @@ $('extensionHorizon').onchange=renderExtension;$('extensionPeriod').onchange=ren
 $('rangeHorizon').onchange=()=>{$('intervalHorizon').value=$('rangeHorizon').value;intervalLab();};
 renderExtension();intervalLab();
 
-function openChapterHash(){const target=document.getElementById(location.hash.slice(1)),parent=target&&target.closest('.view');if(parent&&parent.hidden)show(parent.id);if(target&&parent)scrollResearchTarget(target);}
+function openChapterHash(){const target=document.getElementById(location.hash.slice(1));if(target)scrollResearchTarget(target);}
 window.addEventListener('hashchange',openChapterHash);if(location.hash)openChapterHash();

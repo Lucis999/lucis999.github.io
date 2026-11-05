@@ -1,16 +1,8 @@
-Visual summary: Can we predict oil prices when markets are disrupted?
-
-1. A rebound is not guaranteed.
-2. Only 2 of 76 matched model comparisons beat no change.
-3. Five-observation 2026 interval coverage improves from 58.5% to 90.2%, with width $13.06 to $26.51.
-
-Limits: revised history, no prospective validation, unresolved long-horizon uncertainty, assumed shipping and household effects.
-
-WTI Crude Oil Price Dynamics
+Crude Oil Pricing Research
 
 Reconstructing a mathematical market model with evidence from 2020 to 2026
 
-Yanqing Li | MATH 377 research extension | Interval and shipping revision 5 November 2026
+New Wave | Mathematical modeling and energy markets | 5 November 2026
 
 Executive summary
 
@@ -544,33 +536,33 @@ Selection using earlier scores, reported on 2026
 
 Selection uses pre-2026 target errors among all eleven models. The choices are Huber AR at one step, conservative ensemble at five and sixty, and no change at twenty. Their 2026 errors versus no change are $2.6694 versus $2.6710, $6.0417 versus $5.9951, $11.8621 versus $11.8621 and $23.6534 versus $23.7297, respectively. The gains are tiny or reverse. Original forecasts and intervals are preserved; no new live forecast is issued.
 
-Reading the Dashboard in four chapters
+Reading the visual research page
 
-1 / Question and evidence: what is the research origin?
+Start with the mechanism: Shipping Lab
 
-The 2020 project asked whether fear, trading and shipping could explain oil-price behavior. That is a reasonable question; its equations did not estimate those links from data. The reconstruction audits the claim, then tests a narrower question: can forecasts make smaller mistakes than keeping the current price? Original ideas, empirical tests and the shipping illustration are different layers.
+The page leads with a visual question: what happens between a delayed ship and everyday fuel supply? In Buffered disruption, stock covers the missing flow while daily deliveries continue. In Severe congestion, drag the timeline to about 30%: the chosen buffer is exhausted and the scenario meets about 43% of assumed daily need. Continue past reopening to watch supply recover and stock refill.
 
-Show findings before historical charts. A chart describes what happened, without proving what caused it. Keep negative WTI spot prices and distinguish them from the expiring futures contract. Official histories can be revised; estimates and forecasts have separate labels.
+The tank shows a chosen scenario buffer, not measured total capacity. Refining and delivery lags are compressed. Price-pressure labels illustrate assumed direction without a pump-price calculation or a causal estimate. No animation value enters the fitted forecasting models.
 
-2 / Models and scenarios: what earns predictive trust?
+Then change a price assumption
 
-Explain market feedback before equations, then compare errors on the same dates. New candidates yield small historical reductions, without a clear breakthrough. Keep unsuccessful candidates visible. Scenario asks what might follow from chosen supply-demand assumptions; its price is not a forecast with a measured probability.
+The conditional-price exhibit asks what might follow from a selected supply-demand change and an assumed adjustment strength. Its displayed level is not a forecast with a measured probability. It follows the shipping illustration so readers can connect a physical mechanism with a separate, explicitly assumed price response.
 
-3 / Reliability and forecast ranges: two different questions
+Check the question and the market record
 
-First vary reasonable settings: the 19-setting display checks the original models, while new candidates are reported separately. Then check the safety margin. Too narrow misses prices; too wide offers little guidance. At five price steps, the earlier range catches 24 of 41 dated 2026 outcomes, versus 37 of 41 under the rule chosen from older scores. Width rises from $13.06 to $26.51 per barrel. Dots show counts, not date order.
+The 2020 project asked whether fear, trading and shipping could explain oil-price behavior. That remains a reasonable question, but its original equations did not estimate those links from data or establish stable recovery. The rebuilt empirical question is narrower: can a forecast make smaller mistakes than keeping the current price? Historical charts describe changes without proving their causes.
 
-Longer horizons remain difficult. Count width and severe misses as well as captured prices. Repairing historical failures is not independent future validation. The 20-step 84.2% candidate remains exploratory; it does not replace the pre-2026-selected rule.
+Official history includes the negative 2020 spot observations and the 2026 market-stress period. The frozen 2026 WTI sample contains 211 prices through 3 November. Spot prices are distinguished from futures, estimates from forecasts and observed records from scenario assumptions. Market exploration is available on the page; the mathematical audit remains documented in the full report.
 
-4 / Shipping Lab: how to narrate the mechanism
+Finish with models and reliability
 
-Start with Buffered disruption: ships slow, but stock covers missing flow while daily deliveries continue. Switch to Severe congestion and drag the timeline to about 30%: the buffer is empty and about 43% of assumed daily need is met. Continue past reopening: deliveries recover, spare capacity clears cargo and stock refills.
+Models are compared on identical dates. Some added candidates reduce historical errors slightly, but the uncertainty ranges include no advantage. All unsuccessful candidates remain visible. Revised histories and previously inspected outcomes mean the study is retrospective, not a new prospective test.
 
-The tank represents the chosen buffer, not measured total tank capacity. Refining and delivery lags are compressed. Price-pressure labels show assumed direction, without a price or causal estimate. No live tanker, stock or retail-price data enter the animation, and no animation value enters the forecasting models.
+A prediction range is a safety margin: too narrow misses prices; too wide offers little guidance. At five observed-price steps, the earlier rule catches 24 of 41 dated 2026 outcomes and the rule chosen from older scores catches 37. Mean width rises from $13.06 to $26.51 per barrel. Longer horizons remain difficult. Dots summarize counts rather than date order.
 
-What the portfolio can reasonably claim
+Limits and next evidence
 
-An original question, equation and code audit, transparent data, reproducible comparisons, honest negative results and a mechanism illustration. Not yet a fitted fear-volume system, guaranteed recovery, dependable forecasting edge, causal shock estimate or demonstrated profitable strategy.
+The project can support a documented audit, reproducible model comparisons and clear mechanism visualization. It does not yet establish a dependable forecasting edge, causal shock attribution or trading profitability. The next decisive step is to fix methods and record new timestamped forecasts before their outcomes become available.
 
 Conclusions limitations and reproduction
 

@@ -15,7 +15,7 @@ function prepareShippingPlayback(z){
  shipPlayback={z,svg,queueLayer,trafficLayer,queue:[],moving:[],served:0,nextId:0,elapsed:0,last:0,nextArrival:30/z.arrivals,nextRelease:.45,arrivalGap:30/z.arrivals,releaseGap:30/z.capacity,travel:10+4*(1-z.open/100)};
  for(let i=0;i<initial;i++)enqueueBoat(shipPlayback);
  prepareHouseholdFlow(shipPlayback);updatePlaybackButton();renderShipFrame(shipPlayback,0);
- $('shipPlaybackNote').textContent='Boats move from the left, through the bottleneck, to the receiving side. Playback is illustrative; icons are samples and animation seconds are not real voyage days. Results below still describe the full chosen duration.';
+ $('shipPlaybackNote').textContent='Illustrative scenario · sample boats, not live tracking · the chosen buffer is not a measured tank level.';
  $('shipProgress').textContent=z.days===0?'Set the disruption duration above zero to play the flow.':shipReducedMotion.matches&&!shipMotionOverride?'Motion is off for your reduced-motion preference. Select Play animation to start.':'Settings applied · sample boats will pass one at a time.';
  if(!z.days||$('shipping').hidden)return;
  shipDebounce=setTimeout(startShipFrame,220);

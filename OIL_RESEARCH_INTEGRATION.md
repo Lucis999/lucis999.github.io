@@ -2,15 +2,17 @@
 
 The oil project now links to and embeds a public, same-origin snapshot at
 `dist/wti-research/`. Its source is the sanitized Dashboard release
-`da8016896c107e2986318895ab2d45965e5ce5d4`. The separate Sites research workspace
+`cfc79256aba21b58c6b512450d849df1021e44af`. The separate Sites research workspace
 keeps its existing private audience; public portfolio visitors do not need to
 authenticate there.
 
-The copied exhibit retains all four chapters, evidence downloads, the 23-page
-report and one-page summary. Only the wrapper is adapted: `?embed=portfolio`
-hides duplicate page chrome, keeps chapter navigation visible and scrolls inside
-the frame; `?period=2026#market` opens the 2026 market record. The original
-`atlas.js`, world-map data, background CSS and motion controls are unchanged.
+The exhibit now follows a continuous visualization-first layout: 2026 context,
+Shipping Lab, conditional price, question and evidence, models, reliability,
+then limitations. There is no chapter-tab navigation. The 22-page report remains
+available; the separate illustrated summary has been removed from hosted files
+and links. `?embed=portfolio` hides duplicate chrome and reports body height to
+the same-origin Portfolio wrapper, avoiding an internal scrolling panel.
+The original globe assets and motion controls are unchanged.
 
 The project page and project cards are generated from `projects-data.json` by
 `scripts/update-projects.mjs`; `scripts/oil-feature.mjs` renders the 2026 evidence
