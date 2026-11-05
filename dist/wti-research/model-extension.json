@@ -1,0 +1,1918 @@
+{
+  "protocol": {
+    "status": "Post-hoc extension; 2026 previously examined",
+    "horizons": [
+      1,
+      5,
+      20,
+      60
+    ],
+    "origins": "Exact original five-observation grid, no dropped dates",
+    "training": "Targets must mature at or before origin; maximum 504 rows except recent median 252",
+    "selection": "Lowest pre-2026 target MAE including the no-change and original models, frozen rule then reported on 2026 origins",
+    "settings": {
+      "Recent median": "Median of last 252 matured direct-horizon changes",
+      "Median AR": "3 original change features, 504 rows, StandardScaler + QuantileRegressor q=.5 alpha=.05 highs",
+      "Huber AR": "3 change features, 504 rows, StandardScaler + Huber epsilon=1.35 alpha=1 max_iter=2000 tol=1e-6",
+      "Median boosting": "13 original features, 504 rows, absolute_error loss, 40 iterations, 3 leaves, min leaf 40, L2=10, learning rate .1, no early stopping, seed 377",
+      "Shrunk recent ridge": "13 features, 504 rows, standardize then Ridge alpha100, row half-life126, 25% estimated change + 75% no-change",
+      "Conservative ensemble": "25% of the average Median AR, Huber AR and Median boosting changes; 75% no-change"
+    },
+    "inference": "2,000 circular paired loss-block draws; block=max(5,ceil(h/5)); Holm adjustment over all 48 candidate/horizon/period contrasts; exploratory",
+    "sources": [
+      "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.QuantileRegressor.html",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.HuberRegressor.html",
+      "https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html"
+    ]
+  },
+  "metrics": [
+    {
+      "horizon": 1,
+      "model": "AR",
+      "family": "Original",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7898533284770153,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": -4.430169283722063,
+      "rmse": 2.58478817682342
+    },
+    {
+      "horizon": 1,
+      "model": "AR",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.6137654690359473,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -4.07841684787329,
+      "rmse": 2.332786840160994
+    },
+    {
+      "horizon": 1,
+      "model": "AR",
+      "family": "Original",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.8212250766318414,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": -5.626184006540691,
+      "rmse": 3.733565205527014
+    },
+    {
+      "horizon": 1,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7124353544403692,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": 0.08683331398746663,
+      "rmse": 2.4733861068404766,
+      "difference": -0.0014882566707414835,
+      "ci95": [
+        -0.0071942233312600745,
+        0.00400782728451165
+      ],
+      "p_value": 0.6031984007996002,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5487017987958738,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": 0.11780864017382209,
+      "rmse": 2.2615382161814934
+    },
+    {
+      "horizon": 1,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.671446180358129,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": -0.018487765235697395,
+      "rmse": 3.463068514963638,
+      "difference": 0.0004937994057477064,
+      "ci95": [
+        -0.01348508900041167,
+        0.012535965280942135
+      ],
+      "p_value": 0.9480259870064968,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Drift",
+      "family": "Original",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7135081563802048,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": 0.024239979437390424,
+      "rmse": 2.4729199491136047
+    },
+    {
+      "horizon": 1,
+      "model": "Drift",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5512303642294885,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -0.045269014092808035,
+      "rmse": 2.263452434834564
+    },
+    {
+      "horizon": 1,
+      "model": "Drift",
+      "family": "Original",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.6639923675486856,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 0.2605817106036801,
+      "rmse": 3.4534474219177906
+    },
+    {
+      "horizon": 1,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7628876381968834,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": -2.8568383543085663,
+      "rmse": 2.565314990354409
+    },
+    {
+      "horizon": 1,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.6217028973769223,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -4.590334466277679,
+      "rmse": 2.4060539483995784
+    },
+    {
+      "horizon": 1,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.5898268344280866,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 3.037326576948085,
+      "rmse": 3.349359177096434
+    },
+    {
+      "horizon": 1,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7083371546364003,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": 0.325945476128231,
+      "rmse": 2.5021877188193553,
+      "difference": -0.005586456474710566,
+      "ci95": [
+        -0.037007080332111225,
+        0.02485606575710137
+      ],
+      "p_value": 0.7101449275362319,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5442559550757793,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": 0.40453950957141105,
+      "rmse": 2.2921239551441865
+    },
+    {
+      "horizon": 1,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.669384180634322,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 0.05871315150514089,
+      "rmse": 3.4870814852726815,
+      "difference": -0.0015682003180587788,
+      "ci95": [
+        -0.08789253313497057,
+        0.08232531297912384
+      ],
+      "p_value": 0.975512243878061,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 288,
+      "mae": 1.716854981042616,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": -0.1710327060378658,
+      "rmse": 2.4809358592984014,
+      "difference": 0.002931369931504952,
+      "ci95": [
+        -0.013840244864965724,
+        0.01960388045716178
+      ],
+      "p_value": 0.7251374312843578,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5549050079206534,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -0.28226200049308314,
+      "rmse": 2.2728100521369763
+    },
+    {
+      "horizon": 1,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.665419109328397,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 0.20716474256313733,
+      "rmse": 3.4568723387486564,
+      "difference": -0.005533271623983961,
+      "ci95": [
+        -0.023156844595288988,
+        0.012745834618947263
+      ],
+      "p_value": 0.55872063968016,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "All",
+      "n": 288,
+      "mae": 1.719849514602365,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": -0.34575073549587554,
+      "rmse": 2.509429651551849,
+      "difference": 0.0059259034912540415,
+      "ci95": [
+        -0.029183565772947,
+        0.03856411777022643
+      ],
+      "p_value": 0.7256371814092953,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5552419653797493,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -0.30399378219290174,
+      "rmse": 2.2994124675313556
+    },
+    {
+      "horizon": 1,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.6839794457633976,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": -0.48773107689668027,
+      "rmse": 3.494652627797877,
+      "difference": 0.01302706481101657,
+      "ci95": [
+        -0.08611846370416035,
+        0.09614789928253488
+      ],
+      "p_value": 0.7871064467766117,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7139236111111107,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": 0.0,
+      "rmse": 2.4690470637024675
+    },
+    {
+      "horizon": 1,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5505284552845526,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": 0.0,
+      "rmse": 2.2569638393996754
+    },
+    {
+      "horizon": 1,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.670952380952381,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 0.0,
+      "rmse": 3.4593138598502997
+    },
+    {
+      "horizon": 1,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7136979166666666,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": 0.013168290755838363,
+      "rmse": 2.48019833226319,
+      "difference": -0.00022569444444414048,
+      "ci95": [
+        -0.020035156250000845,
+        0.017569878472222744
+      ],
+      "p_value": 0.9810094952523738,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.554390243902439,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -0.24906273759275344,
+      "rmse": 2.2754170528119992
+    },
+    {
+      "horizon": 1,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.6467857142857136,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 0.9047958637903641,
+      "rmse": 3.443171036372471,
+      "difference": -0.024166666666667187,
+      "ci95": [
+        -0.06500000000000096,
+        0.015122023809523585
+      ],
+      "p_value": 0.26486756621689156,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "All",
+      "n": 288,
+      "mae": 1.8334084906029444,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": -6.971423855604253,
+      "rmse": 2.6361177964534863
+    },
+    {
+      "horizon": 1,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.6709922436168922,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -7.769208486420975,
+      "rmse": 2.398826304587857
+    },
+    {
+      "horizon": 1,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.7847036515212515,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": -4.258828101170042,
+      "rmse": 3.7345595368988245
+    },
+    {
+      "horizon": 1,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "All",
+      "n": 288,
+      "mae": 1.7083952462116758,
+      "rw_mae": 1.7139236111111107,
+      "improvement_pct": 0.32255608497341326,
+      "rmse": 2.4718631852746595,
+      "difference": -0.005528364899434991,
+      "ci95": [
+        -0.019504526863202813,
+        0.006287984099447282
+      ],
+      "p_value": 0.3963018490754623,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 1,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 246,
+      "mae": 1.5516167983165576,
+      "rw_mae": 1.5505284552845526,
+      "improvement_pct": -0.07019174838718278,
+      "rmse": 2.273634700794051
+    },
+    {
+      "horizon": 1,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "2026",
+      "n": 42,
+      "mae": 2.6266690124545113,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 1.6579617373065791,
+      "rmse": 3.4087945138489704,
+      "difference": -0.04428336849786958,
+      "ci95": [
+        -0.11493146459162291,
+        0.009536345117969669
+      ],
+      "p_value": 0.1724137931034483,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "AR",
+      "family": "Original",
+      "period": "All",
+      "n": 287,
+      "mae": 3.379721078576832,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -0.9071374603698112,
+      "rmse": 4.887967401765684
+    },
+    {
+      "horizon": 5,
+      "model": "AR",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.9145060021647686,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": 0.06801991066023305,
+      "rmse": 4.1922431439220045
+    },
+    {
+      "horizon": 5,
+      "model": "AR",
+      "family": "Original",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.230166183483396,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -3.920591343701907,
+      "rmse": 7.887900973707325
+    },
+    {
+      "horizon": 5,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "All",
+      "n": 287,
+      "mae": 3.3471133551457943,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": 0.06641981078553405,
+      "rmse": 4.854743943104575,
+      "difference": -0.002224623948281942,
+      "ci95": [
+        -0.025121096499602487,
+        0.02086111589470016
+      ],
+      "p_value": 0.8500749625187406,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.9064567617835717,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": 0.3440106030487944,
+      "rmse": 4.1850009151476275
+    },
+    {
+      "horizon": 5,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.041650516808891,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -0.7761070745177401,
+      "rmse": 7.765608155798324,
+      "difference": 0.04652856558938004,
+      "ci95": [
+        -0.021323555777028217,
+        0.11470158862405597
+      ],
+      "p_value": 0.1889055472263868,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Drift",
+      "family": "Original",
+      "period": "All",
+      "n": 287,
+      "mae": 3.344226888383128,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": 0.15260002850865373,
+      "rmse": 4.855239180386813
+    },
+    {
+      "horizon": 5,
+      "model": "Drift",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.9092794304915506,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": 0.2472275211422792,
+      "rmse": 4.206299361035738
+    },
+    {
+      "horizon": 5,
+      "model": "Drift",
+      "family": "Original",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.001909649485516,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -0.11322035350129767,
+      "rmse": 7.698417266499542
+    },
+    {
+      "horizon": 5,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "All",
+      "n": 287,
+      "mae": 3.567076831126067,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -6.500951931130117,
+      "rmse": 5.1365458071626
+    },
+    {
+      "horizon": 5,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 3.096372307073559,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -6.167774404934923,
+      "rmse": 4.464008713542585
+    },
+    {
+      "horizon": 5,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.430030285111249,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -7.254370093393514,
+      "rmse": 8.096604343331787
+    },
+    {
+      "horizon": 5,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 287,
+      "mae": 3.446533698905402,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -2.901938246244562,
+      "rmse": 4.991010636537257,
+      "difference": 0.09719571981132566,
+      "ci95": [
+        -0.023751262392474402,
+        0.21680658466434127
+      ],
+      "p_value": 0.11344327836081959,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.956339076216961,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -1.36634389581487,
+      "rmse": 4.2368517040171225
+    },
+    {
+      "horizon": 5,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.444131039008965,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -7.489573880946954,
+      "rmse": 8.191067553742085,
+      "difference": 0.4490090877894533,
+      "ci95": [
+        0.08628982950313009,
+        0.8246031615460635
+      ],
+      "p_value": 0.017491254372813594,
+      "block": 5,
+      "holm_p": 0.8220889555222389
+    },
+    {
+      "horizon": 5,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 287,
+      "mae": 3.3806177368716965,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -0.933908670097261,
+      "rmse": 4.916391479144318,
+      "difference": 0.031279757777620196,
+      "ci95": [
+        -0.0404077468229884,
+        0.10679174842594766
+      ],
+      "p_value": 0.4077961019490255,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.9274009247842394,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -0.3741185339013464,
+      "rmse": 4.2471022360251505
+    },
+    {
+      "horizon": 5,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.158754392441145,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -2.7294263995471857,
+      "rmse": 7.8359777806330255,
+      "difference": 0.16363244122163453,
+      "ci95": [
+        0.009479862674758232,
+        0.3511085550611224
+      ],
+      "p_value": 0.06646676661669165,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "All",
+      "n": 287,
+      "mae": 3.433417635493673,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -2.5103365776880437,
+      "rmse": 4.993593717664911,
+      "difference": 0.08407965639959702,
+      "ci95": [
+        -0.04268766251568859,
+        0.215594878947524
+      ],
+      "p_value": 0.18990504747626186,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.9839095591356783,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -2.311674922081508,
+      "rmse": 4.275053115098202
+    },
+    {
+      "horizon": 5,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.189937007884905,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -3.249559529406487,
+      "rmse": 8.082936978509542,
+      "difference": 0.1948150566653927,
+      "ci95": [
+        -0.16712980578903097,
+        0.5554704273331229
+      ],
+      "p_value": 0.3193403298350825,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "All",
+      "n": 287,
+      "mae": 3.3493379790940767,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": 0.0,
+      "rmse": 4.84297026375444
+    },
+    {
+      "horizon": 5,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.916489795918367,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": 0.0,
+      "rmse": 4.189331542801333
+    },
+    {
+      "horizon": 5,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "2026",
+      "n": 41,
+      "mae": 5.995121951219511,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": 0.0,
+      "rmse": 7.6996721501316
+    },
+    {
+      "horizon": 5,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "All",
+      "n": 287,
+      "mae": 3.3661846689895465,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -0.5029856646484587,
+      "rmse": 4.88048084646205,
+      "difference": 0.016846689895470363,
+      "ci95": [
+        -0.05574912891986023,
+        0.0887835365853657
+      ],
+      "p_value": 0.6426786606696652,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.930142857142857,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -0.4681333445293534,
+      "rmse": 4.237789409778718
+    },
+    {
+      "horizon": 5,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.037804878048781,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -0.7119609438568153,
+      "rmse": 7.707651725522584,
+      "difference": 0.042682926829269156,
+      "ci95": [
+        -0.01866158536585316,
+        0.10658536585365848
+      ],
+      "p_value": 0.19140429785107446,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "All",
+      "n": 287,
+      "mae": 3.542982197726464,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -5.781566979536779,
+      "rmse": 5.050040202924128
+    },
+    {
+      "horizon": 5,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 3.083499884623168,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -5.726407441525483,
+      "rmse": 4.3578537254778675
+    },
+    {
+      "horizon": 5,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.364806216606864,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -6.166417770903765,
+      "rmse": 8.064357989725826
+    },
+    {
+      "horizon": 5,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "All",
+      "n": 287,
+      "mae": 3.3916415396180377,
+      "rw_mae": 3.3493379790940767,
+      "improvement_pct": -1.2630424516131722,
+      "rmse": 4.9042652494048795,
+      "difference": 0.04230356052396157,
+      "ci95": [
+        0.005403552102898772,
+        0.08532225061860142
+      ],
+      "p_value": 0.034482758620689655,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 5,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 245,
+      "mae": 2.9330008096699607,
+      "rw_mae": 2.916489795918367,
+      "improvement_pct": -0.566126230741526,
+      "rmse": 4.2135353584169675
+    },
+    {
+      "horizon": 5,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "2026",
+      "n": 41,
+      "mae": 6.194242880850173,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -3.321382471463452,
+      "rmse": 7.8901685715513885,
+      "difference": 0.1991209296306624,
+      "ci95": [
+        0.004644808939733286,
+        0.44187285842031004
+      ],
+      "p_value": 0.07396301849075462,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "AR",
+      "family": "Original",
+      "period": "All",
+      "n": 284,
+      "mae": 6.3863771804129525,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -2.209674685958962,
+      "rmse": 8.748489097775966
+    },
+    {
+      "horizon": 20,
+      "model": "AR",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.55005932150822,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -2.6202499812800317,
+      "rmse": 7.207881765930442
+    },
+    {
+      "horizon": 20,
+      "model": "AR",
+      "family": "Original",
+      "period": "2026",
+      "n": 38,
+      "mae": 11.991369471578725,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -1.0897240039026368,
+      "rmse": 15.478578301808941
+    },
+    {
+      "horizon": 20,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "All",
+      "n": 284,
+      "mae": 6.290382519620664,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -0.6733446550204469,
+      "rmse": 8.66050421507725,
+      "difference": 0.042072660465735184,
+      "ci95": [
+        -0.03875177874455115,
+        0.12522322741013617
+      ],
+      "p_value": 0.32283858070964516,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.441945360700877,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -0.6212296029715514,
+      "rmse": 7.079413468864687
+    },
+    {
+      "horizon": 20,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "2026",
+      "n": 38,
+      "mae": 11.952979547567018,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -0.7660890069098203,
+      "rmse": 15.485149818543304,
+      "difference": 0.09087428440912504,
+      "ci95": [
+        -0.017892977844457043,
+        0.21151432654509886
+      ],
+      "p_value": 0.12743628185907047,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Drift",
+      "family": "Original",
+      "period": "All",
+      "n": 284,
+      "mae": 6.2970370753751626,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -0.7798463475501283,
+      "rmse": 8.67497342969708
+    },
+    {
+      "horizon": 20,
+      "model": "Drift",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.474824696531134,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -1.2291664675459169,
+      "rmse": 7.139978255446896
+    },
+    {
+      "horizon": 20,
+      "model": "Drift",
+      "family": "Original",
+      "period": "2026",
+      "n": 38,
+      "mae": 11.80608415160913,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": 0.4722695533882826,
+      "rmse": 15.371696263925806
+    },
+    {
+      "horizon": 20,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "All",
+      "n": 284,
+      "mae": 8.060649243980846,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -29.005273836900148,
+      "rmse": 10.965570086740428
+    },
+    {
+      "horizon": 20,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 7.255733985909738,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -34.1580679230266,
+      "rmse": 9.425327249316862
+    },
+    {
+      "horizon": 20,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "2026",
+      "n": 38,
+      "mae": 13.607913259703118,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -14.7175223774777,
+      "rmse": 18.190942501373403
+    },
+    {
+      "horizon": 20,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 284,
+      "mae": 6.5875523454415665,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -5.429347998636547,
+      "rmse": 9.130907607773452,
+      "difference": 0.33924248628663695,
+      "ci95": [
+        -0.07017761330783354,
+        0.7600152207658644
+      ],
+      "p_value": 0.10494752623688156,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.7115838917135,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -5.606829189244289,
+      "rmse": 7.593130242206332
+    },
+    {
+      "horizon": 20,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 38,
+      "mae": 12.44047599130891,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -4.875784823351359,
+      "rmse": 15.938985922880226,
+      "difference": 0.5783707281510171,
+      "ci95": [
+        0.04726448019837505,
+        1.1885140504816496
+      ],
+      "p_value": 0.049475262368815595,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 284,
+      "mae": 6.49100740176844,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -3.8842110600183277,
+      "rmse": 8.91652497529869,
+      "difference": 0.2426975426135106,
+      "ci95": [
+        -0.06018707006065498,
+        0.5572862462626956
+      ],
+      "p_value": 0.12093953023488256,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.629576613788377,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -4.090519745785315,
+      "rmse": 7.380785457453435
+    },
+    {
+      "horizon": 20,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 38,
+      "mae": 12.215668109902952,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -2.980607901391452,
+      "rmse": 15.659082842107892,
+      "difference": 0.3535628467450578,
+      "ci95": [
+        -0.017491403565700458,
+        0.6630186564630403
+      ],
+      "p_value": 0.04297851074462768,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "All",
+      "n": 284,
+      "mae": 6.850282516309038,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -9.634167810549732,
+      "rmse": 9.416873604729654,
+      "difference": 0.6019726571541103,
+      "ci95": [
+        0.10296640917320203,
+        1.0956778869385064
+      ],
+      "p_value": 0.017991004497751123,
+      "block": 5,
+      "holm_p": 0.8275862068965516
+    },
+    {
+      "horizon": 20,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 6.0473633877448485,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -11.81537108496611,
+      "rmse": 7.966698194319803
+    },
+    {
+      "horizon": 20,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "2026",
+      "n": 38,
+      "mae": 12.2536662927982,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -3.3009404397754016,
+      "rmse": 16.02263494965777,
+      "difference": 0.3915610296403085,
+      "ci95": [
+        -0.40318266815036047,
+        1.267133582554081
+      ],
+      "p_value": 0.3538230884557721,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "All",
+      "n": 284,
+      "mae": 6.248309859154928,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": 0.0,
+      "rmse": 8.593907561935872
+    },
+    {
+      "horizon": 20,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.408347107438016,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": 0.0,
+      "rmse": 7.021085539199785
+    },
+    {
+      "horizon": 20,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "2026",
+      "n": 38,
+      "mae": 11.862105263157895,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": 0.0,
+      "rmse": 15.379226932867319
+    },
+    {
+      "horizon": 20,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "All",
+      "n": 284,
+      "mae": 6.506109154929578,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -4.125904469941188,
+      "rmse": 8.994601173152953,
+      "difference": 0.2577992957746483,
+      "ci95": [
+        -0.157958626760563,
+        0.6763124999999999
+      ],
+      "p_value": 0.23088455772113944,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 20,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.629772727272728,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -4.09414587185406,
+      "rmse": 7.41305654468592
+    },
+    {
+      "horizon": 20,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "2026",
+      "n": 38,
+      "mae": 12.295394736842107,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -3.652719850918462,
+      "rmse": 15.882144869566412,
+      "difference": 0.43328947368421156,
+      "ci95": [
+        0.09275986842105446,
+        0.8287236842105271
+      ],
+      "p_value": 0.01999000499750125,
+      "block": 5,
+      "holm_p": 0.8995502248875563
+    },
+    {
+      "horizon": 20,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "All",
+      "n": 284,
+      "mae": 6.950601612907181,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -11.239707530241393,
+      "rmse": 9.457823693611585
+    },
+    {
+      "horizon": 20,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 6.122888600653846,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -13.211827551399802,
+      "rmse": 8.026234517648279
+    },
+    {
+      "horizon": 20,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "2026",
+      "n": 38,
+      "mae": 12.52486964334003,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -5.587240759366652,
+      "rmse": 16.006852913975663
+    },
+    {
+      "horizon": 20,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "All",
+      "n": 284,
+      "mae": 6.415935688242128,
+      "rw_mae": 6.248309859154928,
+      "improvement_pct": -2.682738738406143,
+      "rmse": 8.816861087096498,
+      "difference": 0.16762582908719895,
+      "ci95": [
+        0.05027634254441273,
+        0.30626126900173734
+      ],
+      "p_value": 0.013493253373313344,
+      "block": 5,
+      "holm_p": 0.6476761619190405
+    },
+    {
+      "horizon": 20,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 242,
+      "mae": 5.522075396944073,
+      "rw_mae": 5.408347107438016,
+      "improvement_pct": -2.102828965057535,
+      "rmse": 7.183187296140025
+    },
+    {
+      "horizon": 20,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "2026",
+      "n": 38,
+      "mae": 12.382053203528741,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": -4.383268642757154,
+      "rmse": 15.835721471416418,
+      "difference": 0.5199479403708486,
+      "ci95": [
+        -0.045967606376988594,
+        1.4663167239461379
+      ],
+      "p_value": 0.15292353823088456,
+      "block": 5,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "AR",
+      "family": "Original",
+      "period": "All",
+      "n": 276,
+      "mae": 11.11956228192532,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -6.3346646182099065,
+      "rmse": 14.756826553004352
+    },
+    {
+      "horizon": 60,
+      "model": "AR",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.448088389936157,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -10.233429392806226,
+      "rmse": 12.24745988962504
+    },
+    {
+      "horizon": 60,
+      "model": "AR",
+      "family": "Original",
+      "period": "2026",
+      "n": 30,
+      "mae": 23.391311065841272,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 1.4258759112730557,
+      "rmse": 26.042256058651578
+    },
+    {
+      "horizon": 60,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "All",
+      "n": 276,
+      "mae": 10.409814019939834,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": 0.45254889686351385,
+      "rmse": 14.368811284980003,
+      "difference": -0.047323661219586845,
+      "ci95": [
+        -0.4270031955886645,
+        0.33761695250757573
+      ],
+      "p_value": 0.8135932033983009,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 8.49860106923131,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": 0.8444986712208946,
+      "rmse": 11.343977932795179
+    },
+    {
+      "horizon": 60,
+      "model": "Conservative ensemble",
+      "family": "Extension",
+      "period": "2026",
+      "n": 30,
+      "mae": 23.65340051214505,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 0.32139581053931554,
+      "rmse": 26.83323252363744,
+      "difference": -0.07626615452160905,
+      "ci95": [
+        -0.5243506349432266,
+        0.312955303313487
+      ],
+      "p_value": 0.7326336831584208,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Drift",
+      "family": "Original",
+      "period": "All",
+      "n": 276,
+      "mae": 10.920909765452159,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -4.434981143342065,
+      "rmse": 14.79881391419093
+    },
+    {
+      "horizon": 60,
+      "model": "Drift",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.084734219863751,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -5.994076986458885,
+      "rmse": 11.977516936900406
+    },
+    {
+      "horizon": 60,
+      "model": "Drift",
+      "family": "Original",
+      "period": "2026",
+      "n": 30,
+      "mae": 24.088717797705833,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": -1.5130896530608728,
+      "rmse": 27.022632182367367
+    },
+    {
+      "horizon": 60,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "All",
+      "n": 276,
+      "mae": 12.571362159079495,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -20.21800364863957,
+      "rmse": 17.24847114165953
+    },
+    {
+      "horizon": 60,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 11.420335328677615,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -33.24417343903161,
+      "rmse": 15.441509573218926
+    },
+    {
+      "horizon": 60,
+      "model": "Gradient boosting",
+      "family": "Original",
+      "period": "2026",
+      "n": 30,
+      "mae": 18.743973797485033,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 21.010378861263522,
+      "rmse": 24.731020796391384
+    },
+    {
+      "horizon": 60,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 276,
+      "mae": 11.025748587486541,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -5.437538680891474,
+      "rmse": 15.195566810672307,
+      "difference": 0.5686109063271222,
+      "ci95": [
+        -0.7509408409613462,
+        2.12510161456477
+      ],
+      "p_value": 0.440279860069965,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.066587658319186,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -5.782356093492247,
+      "rmse": 12.16654056444243
+    },
+    {
+      "horizon": 60,
+      "model": "Huber AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 30,
+      "mae": 24.298771883786877,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": -2.398285762351837,
+      "rmse": 27.787523257048054,
+      "difference": 0.5691052171202154,
+      "ci95": [
+        -2.031289149462806,
+        3.2662226610678626
+      ],
+      "p_value": 0.679160419790105,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "All",
+      "n": 276,
+      "mae": 11.134525769794767,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -6.477758152269475,
+      "rmse": 15.2584985281766,
+      "difference": 0.6773880886353474,
+      "ci95": [
+        -0.672831020264882,
+        2.154955177556558
+      ],
+      "p_value": 0.3498250874562719,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.181086808414623,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -7.118248970089991,
+      "rmse": 12.191090783946622
+    },
+    {
+      "horizon": 60,
+      "model": "Median AR",
+      "family": "Extension",
+      "period": "2026",
+      "n": 30,
+      "mae": 24.39281385084809,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": -2.7945912325559874,
+      "rmse": 28.00986819208838,
+      "difference": 0.6631471841814242,
+      "ci95": [
+        -1.2518249581562386,
+        2.590124869382324
+      ],
+      "p_value": 0.5222388805597201,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "All",
+      "n": 276,
+      "mae": 11.148825025261747,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -6.614499733981094,
+      "rmse": 16.01485169988341,
+      "difference": 0.6916873441023265,
+      "ci95": [
+        -1.145003773246527,
+        2.830805993265357
+      ],
+      "p_value": 0.47726136931534235,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.363029959469921,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -9.241029438223869,
+      "rmse": 13.303665379460323
+    },
+    {
+      "horizon": 60,
+      "model": "Median boosting",
+      "family": "Extension",
+      "period": "2026",
+      "n": 30,
+      "mae": 22.937463127432913,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 3.3384520329000966,
+      "rmse": 27.786598804680093,
+      "difference": -0.7922035392337515,
+      "ci95": [
+        -7.299862645813763,
+        5.377727925350864
+      ],
+      "p_value": 0.8040979510244878,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "All",
+      "n": 276,
+      "mae": 10.45713768115942,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": 0.0,
+      "rmse": 14.389618678917023
+    },
+    {
+      "horizon": 60,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 8.570982905982905,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": 0.0,
+      "rmse": 11.400046464892561
+    },
+    {
+      "horizon": 60,
+      "model": "Random walk",
+      "family": "Original",
+      "period": "2026",
+      "n": 30,
+      "mae": 23.729666666666663,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 0.0,
+      "rmse": 26.887374050534078
+    },
+    {
+      "horizon": 60,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "All",
+      "n": 276,
+      "mae": 11.00355072463768,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -5.225263931092061,
+      "rmse": 15.199927655243549,
+      "difference": 0.5464130434782605,
+      "ci95": [
+        -0.7712119565217396,
+        1.873200181159419
+      ],
+      "p_value": 0.4217891054472764,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.0625641025641,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -5.735412168866305,
+      "rmse": 12.196908577428701
+    },
+    {
+      "horizon": 60,
+      "model": "Recent median",
+      "family": "Extension",
+      "period": "2026",
+      "n": 30,
+      "mae": 24.209666666666667,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": -2.022784418941148,
+      "rmse": 27.750715786564257,
+      "difference": 0.4800000000000004,
+      "ci95": [
+        -0.7648500000000017,
+        2.0163583333333355
+      ],
+      "p_value": 0.5217391304347826,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "All",
+      "n": 276,
+      "mae": 10.946918894808459,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": -4.683702448820926,
+      "rmse": 15.013524569445867
+    },
+    {
+      "horizon": 60,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 9.393893416230789,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -9.601121823186197,
+      "rmse": 12.655176642447582
+    },
+    {
+      "horizon": 60,
+      "model": "Ridge drivers",
+      "family": "Original",
+      "period": "2026",
+      "n": 30,
+      "mae": 21.57575373529614,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 9.07687816110856,
+      "rmse": 25.423815735130706
+    },
+    {
+      "horizon": 60,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "All",
+      "n": 276,
+      "mae": 10.368184169732542,
+      "rw_mae": 10.45713768115942,
+      "improvement_pct": 0.8506487543636809,
+      "rmse": 14.346988861759154,
+      "difference": -0.08895351142687834,
+      "ci95": [
+        -0.5225953786938189,
+        0.39050005510064256
+      ],
+      "p_value": 0.6986506746626686,
+      "block": 12,
+      "holm_p": 1
+    },
+    {
+      "horizon": 60,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "Before 2026",
+      "n": 234,
+      "mae": 8.614126027018873,
+      "rw_mae": 8.570982905982905,
+      "improvement_pct": -0.5033625840725087,
+      "rmse": 11.558839455384975
+    },
+    {
+      "horizon": 60,
+      "model": "Shrunk recent ridge",
+      "family": "Extension",
+      "period": "2026",
+      "n": 30,
+      "mae": 22.370325968254896,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 5.728444134958077,
+      "rmse": 25.970614061886316,
+      "difference": -1.3593406984117749,
+      "ci95": [
+        -2.717365589121282,
+        -0.19109286533765765
+      ],
+      "p_value": 0.03498250874562719,
+      "block": 12,
+      "holm_p": 1
+    }
+  ],
+  "selection": [
+    {
+      "horizon": 1,
+      "chosen": "Huber AR",
+      "pre_mae": 1.5442559550757793,
+      "n": 42,
+      "mae": 2.669384180634322,
+      "rw_mae": 2.670952380952381,
+      "improvement_pct": 0.05871315150514089
+    },
+    {
+      "horizon": 5,
+      "chosen": "Conservative ensemble",
+      "pre_mae": 2.9064567617835717,
+      "n": 41,
+      "mae": 6.041650516808891,
+      "rw_mae": 5.995121951219511,
+      "improvement_pct": -0.7761070745177401
+    },
+    {
+      "horizon": 20,
+      "chosen": "Random walk",
+      "pre_mae": 5.408347107438016,
+      "n": 38,
+      "mae": 11.862105263157895,
+      "rw_mae": 11.862105263157895,
+      "improvement_pct": 0.0
+    },
+    {
+      "horizon": 60,
+      "chosen": "Conservative ensemble",
+      "pre_mae": 8.49860106923131,
+      "n": 30,
+      "mae": 23.65340051214505,
+      "rw_mae": 23.729666666666663,
+      "improvement_pct": 0.32139581053931554
+    }
+  ],
+  "candidate_count": 6,
+  "prediction_count": 6810,
+  "data_hashes": {
+    "data/features.csv": "5a1535e8a8a60aeb0f4019e21e2501fc2536317869800f6694b368a2c9c18ee5",
+    "data/aligned.csv": "9d57da866423ea1b1afeeeac08313eaeb7d44266d501dfd8800009719a2209b2",
+    "output/backtest_predictions.csv": "70840779e9ec447f4b42114dcade7ad01de0b7c9f6b624def964e36c9e9dffcc"
+  },
+  "limits": [
+    "All added model choices were made after earlier outcomes had been inspected.",
+    "A pre-2026 selection rule applied now does not make 2026 an untouched holdout.",
+    "More candidates increase the chance of apparent wins; all candidates and Holm-adjusted comparisons are disclosed.",
+    "Overlapping horizons and revised data limit inference.",
+    "Lower historical MAE does not establish trading profits or a causal mechanism."
+  ]
+}

@@ -1,0 +1,24 @@
+'use strict';
+const FRIENDLY_MODELS={'Random walk':'Keep today’s price','Recent median':'Typical recent change','Median AR':'Typical change + price history','Huber AR':'Outlier-resistant price model','Median boosting':'Small median trees','Shrunk recent ridge':'Restrained recent regression','Conservative ensemble':'Conservative blend'};
+function renderExtension(){
+ const E=window.MODEL_EXTENSION,h=+$('extensionHorizon').value,period=$('extensionPeriod').value;
+ const all=E.metrics.filter(z=>z.horizon===h&&z.period===period),rows=all.filter(z=>z.family==='Extension'||z.model==='Random walk').sort((a,b)=>a.mae-b.mae),best=rows[0],selection=E.selection.find(z=>z.horizon===h);
+ const candidate=rows.find(z=>z.family==='Extension'),noClear=candidate.ci95&&candidate.ci95[0]<=0&&candidate.ci95[1]>=0;
+ $('extensionVerdict').innerHTML=best.model==='Random walk'?'<strong>No added model beats keeping today’s price at this horizon.</strong> A more complex method is useful only if its mistakes actually shrink.':`<strong>${FRIENDLY_MODELS[best.model]} has ${fmt(best.improvement_pct,2)}% lower historical error.</strong> ${noClear?'The uncertainty check still includes no improvement. This is a small observed difference, not a dependable win.':'Inspect its uncertainty check before drawing a conclusion.'}`;
+ const max=Math.max(...rows.map(z=>z.mae));
+ $('extensionBars').innerHTML=rows.map(z=>`<div class="extension-row"><span>${FRIENDLY_MODELS[z.model]}</span><div><i style="width:${z.mae/max*100}%;background:${z.model==='Random walk'?'#8d9f98':z.improvement_pct>0?'#087e83':'#bd8768'}"></i></div><b>$${fmt(z.mae,4)}</b><small>${z.model==='Random walk'?'reference':`${fmt(Math.abs(z.improvement_pct),2)}% ${z.improvement_pct>0?'lower':'higher'}`}</small></div>`).join('')+'<p class="small">Average absolute error · USD per barrel · shorter is better · identical forecast dates</p>';
+ $('extensionSelection').textContent=`Using errors before 2026, the comparison would choose ${FRIENDLY_MODELS[selection.chosen]||selection.chosen}. On ${selection.n} dated 2026 forecasts its error is $${fmt(selection.mae,4)}, against $${fmt(selection.rw_mae,4)} for no change. This selection exercise is retrospective; 2026 had already been inspected.`;
+ $('extensionTable').innerHTML=table(['Candidate','Dated forecasts','Average error $/barrel','Error change vs no change','Exploratory difference range','Adjusted p'],all.sort((a,b)=>a.mae-b.mae).map(z=>[z.model,z.n,fmt(z.mae,4),fmt(-z.improvement_pct,2)+'%',z.ci95?z.ci95.map(x=>fmt(x,4)).join(' to '):'Original study',z.holm_p===undefined?'—':fmt(z.holm_p,3)]));
+}
+function renderPlainIntervals(){
+ const h=+$('intervalHorizon').value,I=window.INTERVALS,model=$('intervalModel').value,choice=I.selection.find(z=>z.horizon===h&&z.model===model),old=choice.legacy_2026,newer=choice.selected_2026;
+ $('rangeHorizon').value=String(h);
+ function box(z,label){const hits=Math.round(z.coverage*z.n);return `<article class="range-card"><h3>${label}</h3><p class="range-hit">${hits} <span>of ${z.n} prices landed inside</span></p><div class="range-dots" role="img" aria-label="${hits} of ${z.n} actual prices inside the range">${Array.from({length:z.n},(_,i)=>'<i class="'+(i<hits?'caught':'missed')+'"></i>').join('')}</div><p><strong>${fmt(z.coverage*100,1)}%</strong> caught · average range width <strong>$${fmt(z.mean_width)}</strong> per barrel</p><div class="width-track"><span style="width:${z.mean_width/Math.max(old.mean_width,newer.mean_width)*100}%"></span></div></article>`;}
+ $('plainIntervals').innerHTML=`<div class="range-pair">${box(old,'Earlier range')}${box(newer,'Rule chosen using older data')}</div><p class="plain-takeaway">${h<=5?'The revised range catches more of the short-term price moves, but needs more room.':'Longer-range uncertainty remains a problem: making the band wider has not reliably reached the nine-in-ten target.'} ${newer.mean_interval_score>old.mean_interval_score?'When both width and missed prices are counted together, the revised rule scores worse here.':'The combined check of width and missed prices improves here, but future performance is still unverified.'}</p><p class="small">2026 historical results for ${model}. The rule was chosen from pre-2026 scores, but this repair was designed after historical failures were seen. Dots summarize counts, not date order; the price estimate itself is unchanged.</p>`;
+}
+$('extensionHorizon').onchange=renderExtension;$('extensionPeriod').onchange=renderExtension;
+$('rangeHorizon').onchange=()=>{$('intervalHorizon').value=$('rangeHorizon').value;intervalLab();};
+renderExtension();intervalLab();
+
+function openChapterHash(){const target=document.getElementById(location.hash.slice(1)),parent=target&&target.closest('.view');if(parent&&parent.hidden)show(parent.id);if(target&&parent)scrollResearchTarget(target);}
+window.addEventListener('hashchange',openChapterHash);if(location.hash)openChapterHash();

@@ -213,60 +213,50 @@
   },
   {
     "id": "oil",
-    "title": "WTI Crude Oil Market Model",
+    "title": "WTI Oil Research: Evidence & Uncertainty",
     "theme": "oil",
     "cover": "Beyond<br>the price.",
-    "label": "EXPLORATORY MARKET MODEL",
+    "label": "2020 IDEA / 2026 EVIDENCE",
     "category": "Markets & Models",
-    "status": "Exploratory academic modeling",
-    "course": "MATH 377",
-    "summary": "Exploratory WTI analysis alongside VIX, trading volume and shipping indicators, using Lotka–Volterra-inspired modeling and Bollinger Bands.",
+    "status": "Interactive research exhibit · 2020–2026",
+    "course": "MATH 377 · RESEARCH RECONSTRUCTION",
+    "summary": "A 2020 oil-market question rebuilt with official data through November 2026, fair forecast comparisons, explicit uncertainty and an interactive shipping-and-inventory lab.",
     "skills": [
-      "Mathematical modeling",
-      "Exploratory analysis",
-      "Lotka–Volterra",
-      "Bollinger Bands"
+      "Research audit",
+      "Python modeling",
+      "Forecast evaluation",
+      "Interactive visualization"
     ],
-    "overview": "An academic modeling project exploring WTI crude oil prices alongside VIX, trading volume and shipping indicators. It uses Lotka–Volterra-inspired modeling and Bollinger Bands as exploratory ways to examine market behavior.",
+    "overview": "This project revisits an undergraduate question about fear, trading and shipping during the 2020 oil collapse, then builds a narrower empirical test: can a price forecast improve on keeping today's price? The extension includes 2026 market stress, with frozen official EIA and Cboe observations, chronological backtests and explicit distinctions between verified data, assumptions and forecasts.",
     "sections": [
       {
-        "title": "Research scope",
-        "text": "The project considers WTI prices in a wider market setting by examining volatility, trading activity and shipping indicators alongside the price series. These inputs provide an exploratory framework for studying patterns rather than establishing a causal explanation."
+        "title": "Research value",
+        "text": "The contribution is a transparent research process: preserve the original question, correct mathematical and code errors, build reproducible tests and communicate unsuccessful results alongside improvements. A credible negative result helps identify where extra model complexity has not earned its place."
       },
       {
-        "title": "Modeling approach",
+        "title": "What the model comparisons found",
+        "text": "Five original models and six added candidates are compared on identical original forecast dates. The added study contains 6,810 predictions. Some full-sample errors fall by about 0.33% at one observed-price step and 0.85% at sixty, but both exploratory uncertainty ranges include no improvement. No added candidate improves the twenty-step comparison. These are small retrospective differences, not an established forecasting edge."
+      },
+      {
+        "title": "What changed in 2026",
+        "text": "The exhibit separately evaluates 2026 forecast dates and prediction ranges. At five observed prices ahead, the earlier range catches 24 of 41 outcomes; the rule selected from older scores catches 37. Mean width rises from $13.06 to $26.51 per barrel. Longer horizons remain difficult, and 2026 had already been inspected when the repair was designed."
+      },
+      {
+        "title": "Original idea, empirical tests and mechanism",
+        "text": "The original fear-volume equations remain an audited hypothesis: their claimed stable recovery was not established, and defensible volume and shipping inputs were insufficient to fit that system. The estimated price-change models answer a separate prediction question. Shipping Lab illustrates an assumed physical mechanism and does not validate either forecasting or the original equations."
+      },
+      {
+        "title": "Limitations and next evidence",
         "items": [
-          "WTI prices as the central market series.",
-          "VIX, trading volume and shipping indicators as additional series explored alongside WTI.",
-          "Lotka–Volterra-inspired modeling to explore interacting market dynamics.",
-          "Bollinger Bands as an additional lens for examining price behavior."
+          "Revised historical data and assumed publication delays do not recreate all information available at each past date.",
+          "Small historical model gains do not establish reliable future accuracy, causal explanations or trading profitability.",
+          "2026 is a partial-year, previously inspected sample; the study needs new timestamped forecasts issued before their outcomes.",
+          "Shipping, storage, refining and delivery are simplified assumptions. Tank percentages are not real measurements, and price-pressure labels are not pump-price forecasts."
         ]
-      },
-      {
-        "title": "Validation space",
-        "text": "A dedicated area is reserved for model validation, fit diagnostics and sensitivity checks. Final validation results have not been provided for this portfolio page, so the model is not described as validated or as outperforming a benchmark."
-      },
-      {
-        "title": "Limitations",
-        "items": [
-          "Patterns between market series do not by themselves establish causality.",
-          "An exploratory model does not demonstrate profitable trading performance.",
-          "Results depend on model assumptions and the data window; those details still need to be documented.",
-          "The project does not present a live trading strategy or current oil-price recommendation."
-        ]
-      },
-      {
-        "title": "Next development step",
-        "text": "The next version can document model assumptions, add validation evidence and present the limitations beside the results. The goal is to make the reasoning and uncertainty inspectable before drawing stronger conclusions."
       }
     ],
-    "contribution": "My individual modeling, analysis and reporting contributions will be added here.",
-    "pending": [
-      "Individual contribution",
-      "Data windows and model assumptions",
-      "Model validation and diagnostics",
-      "Limitations and model visuals"
-    ]
+    "contribution": "Reconstructed and audited the original equations and code; assembled official frozen datasets; implemented chronological model comparisons, robustness checks and prediction-range diagnostics; and translated the results into a four-chapter research dashboard and a shipping-to-daily-life illustration.",
+    "pending": []
   },
   {
     "id": "paqt",
