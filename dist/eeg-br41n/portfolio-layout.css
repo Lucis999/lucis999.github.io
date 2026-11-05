@@ -1,0 +1,26 @@
+/* Match the portfolio project shell; retain the educational content within it. */
+:root{--accent:#a4e4d2;--muted:#a9bbce}
+body{font:14px/1.9 Inter,Arial,sans-serif;color:#e3edf8}
+.site-header{position:sticky;top:0;border-bottom:1px solid #ffffff16}
+.site-header nav{position:static;max-width:none;min-height:0;margin:0;padding:18px 4vw;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.site-header .brand{font:500 19px 'Space Grotesk',Arial,sans-serif;letter-spacing:-.7px;white-space:nowrap;text-decoration:none;color:#e3edf8}
+.site-header .links{display:flex;gap:18px;align-items:center;font:12px Inter,Arial,sans-serif}
+.site-header .links a{color:#9eb3c8;text-decoration:none}.site-header .links a:hover,.site-header .links a.active{color:#b5f3de}
+.site-header .menu-toggle{display:none;border:1px solid #ffffff33;background:transparent;color:#e3edf8;padding:8px 12px;font:13px Inter,Arial,sans-serif}
+main{box-sizing:border-box;width:100%;max-width:760px;margin:0 auto;padding:0 28px 32px;background:#071627ed;border-radius:10px;min-width:0}
+.back-link{font-size:12px;display:inline-block;margin:35px 0 0;text-decoration:none;color:#c6dce7}
+.hero.hero-v6{display:block;min-height:0;padding:36px 0 30px}
+h1,h2,h3{font-family:'Space Grotesk',Arial,sans-serif;font-weight:500}
+.hero.hero-v6 h1{font-size:clamp(34px,5vw,59px);line-height:1.15;letter-spacing:-1.6px;margin:20px 0 26px}
+.hero .lead{font-size:16px;line-height:1.8;max-width:650px}.hero p{font-size:14px;line-height:1.9;color:#b3c8d9}
+.eyebrow{font-size:11px;letter-spacing:1.6px;color:#88b8c5}
+h2{font-size:25px;line-height:1.3;letter-spacing:-.4px;margin:0 0 17px}h3{font-size:18px;line-height:1.4}
+.section{padding:30px 0;scroll-margin-top:86px}.section p{font-size:14px;line-height:1.9;color:#b3c8d9}
+.project-status{display:inline-block;font:11px/1.7 Inter,Arial;border:1px solid #75b5a759;color:#c0e9da;background:#173c3d66;border-radius:6px;padding:7px 11px;margin:12px 0 3px}
+.tags{margin:17px 0;gap:7px}.tag{font:10px/1.6 Inter,Arial;padding:4px 9px;border:1px solid #95c8c33d;color:#b4d7d3;border-radius:14px;background:#0b2136b3}
+.cta,button.action{font:600 12px/1.5 Inter,Arial;border-radius:26px;padding:11px 17px;background:#a4e4d2}.cta.outline{border-color:#75b5a759;color:#c0e9da}
+.demo-layout{grid-template-columns:minmax(0,1fr)}.columns,.three,.data-cards,.archive-grid,.gallery{min-width:0}.columns>*{min-width:0}
+.panel,.demo{padding:18px;border-radius:10px}.metric{font-size:30px}.model-cards{grid-template-columns:1fr}.data-cards,.archive-grid{gap:12px}
+.footer{font-size:12px;padding-bottom:70px}
+@media(max-width:1100px){.site-header nav{flex-wrap:wrap;gap:12px}.site-header .menu-toggle{display:block}.site-header .links{display:none;width:100%;padding:12px 0}.site-header .links.open{display:flex;flex-direction:column;align-items:flex-start;gap:0}.site-header .links a{display:block;padding:9px 12px;width:100%}}
+@media(max-width:750px){main{width:calc(100% - 24px);margin:0 12px;padding:0 18px 20px}.hero.hero-v6 h1{font-size:37px;letter-spacing:-1px}.hero.hero-v6{padding:28px 0 25px}.section{padding:25px 0}.three,.data-cards,.archive-grid{grid-template-columns:1fr}.columns{grid-template-columns:1fr}.site-header nav{padding:16px 6vw}.gallery{grid-template-columns:1fr}.back-link{margin-top:25px}}
