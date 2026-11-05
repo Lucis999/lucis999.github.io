@@ -1,0 +1,9 @@
+{
+  "observation_date": "2026-11-03",
+  "price": 99.64,
+  "unit": "USD/barrel",
+  "series": "EIA RWTC daily spot",
+  "source_url": "https://www.eia.gov/dnav/pet/hist/RWTCd.htm",
+  "release_date": "11/4/2026",
+  "checked_at": "2026-11-05T23:23:11.022949+00:00"
+}
