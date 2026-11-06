@@ -1,3 +1,4 @@
+import {updateMovieNightShell} from './update-movie-night-shell.mjs';
 import {oilFeature} from './oil-feature.mjs';
 import {housingFeature} from './housing-feature.mjs';
 import fs from 'node:fs';
@@ -65,3 +66,6 @@ for(const filename of ['index.html','projects.html','future.html']){
  fs.writeFileSync(path.join(dist,filename),html);
 }
 console.log(`Updated ${projects.length} unique projects and both galleries.`);
+
+updateMovieNightShell(root,projects);
+
