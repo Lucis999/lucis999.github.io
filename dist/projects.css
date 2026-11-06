@@ -45,3 +45,5 @@ body:has(.road-feature) .project-pagination a{min-width:0;overflow-wrap:anywhere
  body:has(.road-feature) .road-feature-links a{width:100%;justify-content:center}
  body:has(.road-feature) .road-feature figure{padding:6px;border-radius:8px}
 }
+
+.cover.popcorn{background:radial-gradient(circle at 85% 22%,#315565,#0b1726 70%);color:#e7f5ef}.cover.popcorn strong{font-size:45px;color:#8ae9d6;line-height:1.1}.cover.popcorn:after{content:"✦";position:absolute;right:16px;bottom:35px;font-size:150px;color:#f2bd71;opacity:.22}.cover.popcorn small,.cover.popcorn span{color:#e2c69b}

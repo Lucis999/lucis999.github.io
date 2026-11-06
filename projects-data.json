@@ -1,5 +1,26 @@
 [
   {
+    "id": "movie-night",
+    "title": "Movie Night: Experimental Design Lab",
+    "theme": "popcorn",
+    "cover": "Small kernels.<br>Better movie nights.",
+    "label": "STORAGE × FLAVOUR · TWO INDEPENDENT STUDIES",
+    "category": "Experimental Design",
+    "status": "Live interactive study",
+    "course": "Independent research case study",
+    "summary": "Explore how storage and flavour relate to popcorn yield through two independent experiments, interactive comparisons and reproducible statistical analysis.",
+    "skills": [
+      "Experimental design",
+      "ANOVA & regression",
+      "Interactive visualization",
+      "Reproducible analysis"
+    ],
+    "overview": "A movie-night research story connecting real observations to controlled comparisons, model diagnostics, and downloadable datasets.",
+    "sections": [],
+    "contribution": "Personal storage experiment, statistical reproduction and interactive presentation; a separately attributed flavour reference study.",
+    "pending": []
+  },
+  {
     "id": "road-safety",
     "title": "Vancouver Road Safety Analytics",
     "theme": "roadsafety",
