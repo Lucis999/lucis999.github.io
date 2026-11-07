@@ -33,7 +33,9 @@ jobs:
       - name: Generate project pages
         run: node scripts/update-projects.mjs
       - name: Validate site
-        run: node scripts/check-site.mjs
+        run: |
+          node scripts/check-site.mjs
+          node scripts/check-project-transitions.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website

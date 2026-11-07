@@ -46,36 +46,6 @@
     "pending": []
   },
   {
-    "id": "hotel-security",
-    "title": "Hotel Security Decision Support",
-    "theme": "hotel",
-    "cover": "See the path.<br>Choose the defense.",
-    "label": "CYBERSECURITY DECISION SUPPORT",
-    "category": "Security & Decision Analytics",
-    "status": "Live interactive prototype",
-    "course": "Academic security architecture · Portfolio extension",
-    "summary": "Trace five hotel security scenarios, compare original and improved defenses, and prioritize controls within a limited budget.",
-    "skills": [
-      "Network segmentation",
-      "RBAC",
-      "Risk modeling",
-      "Interactive simulation"
-    ],
-    "overview": "A browser-local decision-support prototype translates a hotel security architecture case into a multi-floor hotel and synchronized network map. A shared scenario timeline explains entry points, propagation, containment and conditional recovery. A budget optimizer and editable access policy make control trade-offs inspectable.",
-    "sections": [
-      {
-        "title": "Problem and approach",
-        "text": "How can a hotel explain incident impact and prioritize security improvements without hiding the assumptions behind a risk score? Five synthetic scenarios connect visible incident paths with selected defenses and budget-constrained control choices."
-      },
-      {
-        "title": "Evidence and limitations",
-        "text": "The academic report and presentation are available as privacy-redacted PDFs. Layouts, costs, effectiveness and numerical results are illustrative extensions; no live attacks, real customer data or measured security outcomes are claimed."
-      }
-    ],
-    "contribution": "The original security plan was a collaborative academic project. The portfolio extension presents a working simulation, transparent assumptions and privacy-safe evidence; individual authorship of every original component is not claimed.",
-    "pending": []
-  },
-  {
     "id": "eeg",
     "title": "EEG Signal Classification",
     "theme": "eeg",
@@ -135,6 +105,86 @@
     "contribution": "Developed the planner through iterative financial modeling, interface design and scenario testing. The project combines Python calculation modules, a shared scenario workflow, interactive visualizations, conditional decision pathways, regression tests and publishing documentation.",
     "pending": [],
     "liveUrl": "https://lucis-mortgage-planner.streamlit.app/"
+  },
+  {
+    "id": "oil",
+    "title": "Crude Oil Pricing Research",
+    "theme": "oil",
+    "cover": "Beyond<br>the price.",
+    "label": "2020 IDEA / 2026 EVIDENCE",
+    "category": "Markets & Models",
+    "status": "Interactive oil research · 2020–2026",
+    "course": "MATHEMATICAL MODELING",
+    "summary": "Follow oil from shipping routes to storage and daily life, then explore price assumptions and the limits of forecasting.",
+    "skills": [
+      "Market mechanisms",
+      "Price scenarios",
+      "Model evaluation"
+    ],
+    "overview": "This project revisits an undergraduate question about fear, trading and shipping during the 2020 oil collapse, then builds a narrower empirical test: can a price forecast improve on keeping today's price? The extension includes 2026 market stress, with frozen official EIA and Cboe observations, chronological backtests and explicit distinctions between verified data, assumptions and forecasts.",
+    "sections": [
+      {
+        "title": "Limitations & next evidence",
+        "items": [
+          "The price response and shipping buffer are assumed scenarios, not measured causal effects or live tank levels.",
+          "Small historical model gains remain uncertain. Wider prediction ranges do not guarantee future reliability.",
+          "The next test needs new forecasts recorded before their outcomes, using methods fixed in advance."
+        ]
+      }
+    ],
+    "contribution": "Reconstructed and audited the original equations and code; assembled official frozen datasets; implemented chronological model comparisons, robustness checks and prediction-range diagnostics; and translated the results into a four-chapter research dashboard and a shipping-to-daily-life illustration.",
+    "pending": []
+  },
+  {
+    "id": "hotel-security",
+    "title": "Hotel Security Decision Support",
+    "theme": "hotel",
+    "cover": "See the path.<br>Choose the defense.",
+    "label": "CYBERSECURITY DECISION SUPPORT",
+    "category": "Security & Decision Analytics",
+    "status": "Live interactive prototype",
+    "course": "Academic security architecture · Portfolio extension",
+    "summary": "Trace five hotel security scenarios, compare original and improved defenses, and prioritize controls within a limited budget.",
+    "skills": [
+      "Network segmentation",
+      "RBAC",
+      "Risk modeling",
+      "Interactive simulation"
+    ],
+    "overview": "A browser-local decision-support prototype translates a hotel security architecture case into a multi-floor hotel and synchronized network map. A shared scenario timeline explains entry points, propagation, containment and conditional recovery. A budget optimizer and editable access policy make control trade-offs inspectable.",
+    "sections": [
+      {
+        "title": "Problem and approach",
+        "text": "How can a hotel explain incident impact and prioritize security improvements without hiding the assumptions behind a risk score? Five synthetic scenarios connect visible incident paths with selected defenses and budget-constrained control choices."
+      },
+      {
+        "title": "Evidence and limitations",
+        "text": "The academic report and presentation are available as privacy-redacted PDFs. Layouts, costs, effectiveness and numerical results are illustrative extensions; no live attacks, real customer data or measured security outcomes are claimed."
+      }
+    ],
+    "contribution": "The original security plan was a collaborative academic project. The portfolio extension presents a working simulation, transparent assumptions and privacy-safe evidence; individual authorship of every original component is not claimed.",
+    "pending": []
+  },
+  {
+    "id": "movie-night",
+    "title": "Movie Night: Experimental Design Lab",
+    "theme": "popcorn",
+    "cover": "Small kernels.<br>Better movie nights.",
+    "label": "STORAGE × FLAVOUR · TWO INDEPENDENT STUDIES",
+    "category": "Experimental Design",
+    "status": "Live interactive study",
+    "course": "Independent research case study",
+    "summary": "Explore how storage and flavour relate to popcorn yield through two independent experiments, interactive comparisons and reproducible statistical analysis.",
+    "skills": [
+      "Experimental design",
+      "ANOVA & regression",
+      "Interactive visualization",
+      "Reproducible analysis"
+    ],
+    "overview": "A movie-night research story connecting real observations to controlled comparisons, model diagnostics, and downloadable datasets.",
+    "sections": [],
+    "contribution": "Personal storage experiment, statistical reproduction and interactive presentation; a separately attributed flavour reference study.",
+    "pending": []
   },
   {
     "id": "cgi",
@@ -240,56 +290,6 @@
       "Model specifications and comparison results",
       "Evaluation windows and forecast visuals"
     ]
-  },
-  {
-    "id": "oil",
-    "title": "Crude Oil Pricing Research",
-    "theme": "oil",
-    "cover": "Beyond<br>the price.",
-    "label": "2020 IDEA / 2026 EVIDENCE",
-    "category": "Markets & Models",
-    "status": "Interactive oil research · 2020–2026",
-    "course": "MATHEMATICAL MODELING",
-    "summary": "Follow oil from shipping routes to storage and daily life, then explore price assumptions and the limits of forecasting.",
-    "skills": [
-      "Market mechanisms",
-      "Price scenarios",
-      "Model evaluation"
-    ],
-    "overview": "This project revisits an undergraduate question about fear, trading and shipping during the 2020 oil collapse, then builds a narrower empirical test: can a price forecast improve on keeping today's price? The extension includes 2026 market stress, with frozen official EIA and Cboe observations, chronological backtests and explicit distinctions between verified data, assumptions and forecasts.",
-    "sections": [
-      {
-        "title": "Limitations & next evidence",
-        "items": [
-          "The price response and shipping buffer are assumed scenarios, not measured causal effects or live tank levels.",
-          "Small historical model gains remain uncertain. Wider prediction ranges do not guarantee future reliability.",
-          "The next test needs new forecasts recorded before their outcomes, using methods fixed in advance."
-        ]
-      }
-    ],
-    "contribution": "Reconstructed and audited the original equations and code; assembled official frozen datasets; implemented chronological model comparisons, robustness checks and prediction-range diagnostics; and translated the results into a four-chapter research dashboard and a shipping-to-daily-life illustration.",
-    "pending": []
-  },
-  {
-    "id": "movie-night",
-    "title": "Movie Night: Experimental Design Lab",
-    "theme": "popcorn",
-    "cover": "Small kernels.<br>Better movie nights.",
-    "label": "STORAGE × FLAVOUR · TWO INDEPENDENT STUDIES",
-    "category": "Experimental Design",
-    "status": "Live interactive study",
-    "course": "Independent research case study",
-    "summary": "Explore how storage and flavour relate to popcorn yield through two independent experiments, interactive comparisons and reproducible statistical analysis.",
-    "skills": [
-      "Experimental design",
-      "ANOVA & regression",
-      "Interactive visualization",
-      "Reproducible analysis"
-    ],
-    "overview": "A movie-night research story connecting real observations to controlled comparisons, model diagnostics, and downloadable datasets.",
-    "sections": [],
-    "contribution": "Personal storage experiment, statistical reproduction and interactive presentation; a separately attributed flavour reference study.",
-    "pending": []
   },
   {
     "id": "paqt",
