@@ -36,6 +36,7 @@ jobs:
         run: |
           node scripts/check-site.mjs
           node scripts/check-project-transitions.mjs
+          node scripts/check-project-shells.mjs
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
       - name: Upload website

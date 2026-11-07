@@ -16,3 +16,9 @@ Run node scripts/check-project-transitions.mjs for route interception, motion/na
 The new project lives at `/cryptography/`, with an opening-animation replay page at `/cryptography-entry.html`. It reuses the existing globe, fonts, navigation and motion preferences. The English payment arena, guided experiment, algorithm comparison, migration planner and two verified redacted group papers are included. All account movement is synthetic; WebCrypto signatures, authenticated encryption and SHA-256 digests are real.
 
 The shared `cipher` transition depicts a payment envelope passing through a symbolic machine. It is decorative, lasts about two seconds, supports Skip/Escape, and is bypassed for reduced or paused motion. The original six projects retain their order; the new card is seventh. This English edition is approved for publication through the existing GitHub Pages workflow.
+
+## Shared project layout
+
+All project pages use `dist/project-shell.css` and the idempotent `scripts/update-project-shells.mjs` presentation pass. The content frame is capped at 850px, with a common back link, responsive heading scale, previous/next project navigation and an external portfolio footer. Each project retains its research content, visual identity and interactive behavior. Crypto comparisons stack below 900px; their diagram labels are enlarged for the narrower desktop frame. Hotel context remains available in an expandable section.
+
+`update-projects.mjs` applies this pass during every build. `check-project-shells.mjs` guards the common structure on all 12 canonical and legacy project pages. Browser QA covers desktop, iPad landscape/portrait, tablet and 390px/360px phones, including menus, navigation and representative interactions.
