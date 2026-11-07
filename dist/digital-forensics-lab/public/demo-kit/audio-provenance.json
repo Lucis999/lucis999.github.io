@@ -1,0 +1,12 @@
+{
+  "classification": "new synthetic audio",
+  "historical": false,
+  "generator": "tools/generate-audio.mjs",
+  "encoding": "MPEG-1 Layer III / 128 kbps",
+  "sampleRate": 44100,
+  "channels": 2,
+  "sourceDurationSeconds": 2.4,
+  "content": "440 Hz then 660 Hz sine tones with fade-in/out; no speech or music",
+  "size": 38870,
+  "sha256": "21bfba866fff15f3c3154b981fd0a7293a9d25523b13576d0e845564016801d8"
+}

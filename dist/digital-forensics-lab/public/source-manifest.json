@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Demo1_5_Go to the website.jpg",
+    "sha256": "5891ce920ff529762c45a6ce767a238165394c3b9193446a68936c28993e8676",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo1_6_Find Header & Trailers.jpg",
+    "sha256": "ed09cf5ae07cf08447348d7e90f2cea2188874cba621577135bcfdd5a430e23b",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo1_7_File Trailer.jpg",
+    "sha256": "0e307454b91f4dff7caeeb02c0e30c43614a957925f3dafb871a8c2f85f0ac58",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo1_8_Adding Extension.jpg",
+    "sha256": "0ae854da49efe4365d7a687a919e726c16b314c3dc2359cc896330d5ca4632d9",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo1_9_It works.jpg",
+    "sha256": "a1b4d3ee016856d8aedc092a20327ddd52e95dd6d17f3fe6bb6be67f99e68942",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo2_1_File without extension.jpg",
+    "sha256": "d9c1189002cfe064cf8ee9d0723b15fc5c8866ef22d3a43cfc04e92df5dd5e1b",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo2_2_Find Extension.jpg",
+    "sha256": "b67ddb1b7f68ef5fb64ccf9a3fc11450bc4454ff52a82185229ff85236ee4ac1",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo2_3_Edit Extension.jpg",
+    "sha256": "d90c641ece681512ab5485772769a79c8e41167b8c7be81156899ae9d5c0b959",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "Demo2_4_File Extension Works.jpg",
+    "sha256": "8d199071696607713b3ccdcd3e14e55562bd77bf65c7ae8f5129915768dcf953",
+    "classification": "historical original attachment"
+  },
+  {
+    "name": "INCS712-Demo Report_updated.doc",
+    "sha256": "e99d54253456d291766133ed9274498ed13d5898b5843c0c99769c013fb6979d",
+    "classification": "historical original attachment"
+  }
+]
