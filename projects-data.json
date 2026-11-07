@@ -187,6 +187,40 @@
     "pending": []
   },
   {
+    "id": "cryptography",
+    "title": "Cryptography & Financial Cybersecurity",
+    "theme": "cipher",
+    "cover": "Follow the payment.<br>Spot the attack.",
+    "label": "CRYPTOGRAPHY / PAYMENT DEFENSE",
+    "category": "Security & Trust",
+    "status": "Interactive research lab",
+    "course": "NYIT · Cybersecurity research / Portfolio extension",
+    "summary": "Follow a payment through real browser cryptography, compare attack and defense paths, and inspect what reaches the recipient.",
+    "skills": [
+      "WebCrypto",
+      "Digital signatures",
+      "Threat modeling",
+      "Interactive simulation"
+    ],
+    "overview": "A unified portfolio extension built around two group research papers on blockchain risk and post-quantum cryptography. Real browser cryptographic computations are separated from illustrative attacks, account balances and approval policies.",
+    "sections": [
+      {
+        "title": "Payment defense arena",
+        "items": [
+          "Compare unprotected and defended flows across recipient substitution, signer misuse, replay, eavesdropping and normal payment.",
+          "Play, pause or step through signing, transmission, attack, verification and synthetic settlement.",
+          "Inspect AES-GCM wire bytes, ECDSA signatures and SHA-256 hash-linked records."
+        ]
+      },
+      {
+        "title": "Evidence and limits",
+        "text": "Two privacy-redacted group papers remain available as historical sources. Current explanations correct the original RSA/Riemann hypothesis error and distinguish modern NIST signature standards from executed browser algorithms. All money movements are synthetic."
+      }
+    ],
+    "contribution": "Research contributor on two collaborative group papers. This interactive browser lab is a subsequent portfolio extension; it does not assert sole authorship of the papers or a specific original team task allocation.",
+    "pending": []
+  },
+  {
     "id": "cgi",
     "title": "CGI Equity Valuation",
     "theme": "equity",
