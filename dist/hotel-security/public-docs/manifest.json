@@ -1,0 +1,20 @@
+[
+  {
+    "source": "615-Group Project Report- Group Polar.pdf",
+    "file": "report-final-redacted.pdf",
+    "pages": 14,
+    "redaction_count": 69,
+    "sha256": "59f7fed34d1c4fdf96ddebb18c333abfd6e6b28b1d866a25f80172a9eb83ff7d",
+    "format": "flattened-redacted-pdf",
+    "source_sha256": "ff025537c782ddbb67715423967f0992f75d741dac967ff9b5ca372cbeae75a0"
+  },
+  {
+    "source": "615-Polar-Presentation.pdf",
+    "file": "presentation-redacted.pdf",
+    "pages": 17,
+    "redaction_count": 18,
+    "sha256": "5b93878510a4315884a6747ea45e70e69fe77212c321f61a59b6e8f90d8010f1",
+    "format": "flattened-redacted-pdf",
+    "source_sha256": "de816ce9c892b43b9e551144bf825787fc953b8e2a6451b54951523892ef5ab0"
+  }
+]

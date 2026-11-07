@@ -47,3 +47,5 @@ body:has(.road-feature) .project-pagination a{min-width:0;overflow-wrap:anywhere
 }
 
 .cover.popcorn{background:radial-gradient(circle at 85% 22%,#315565,#0b1726 70%);color:#e7f5ef}.cover.popcorn strong{font-size:45px;color:#8ae9d6;line-height:1.1}.cover.popcorn:after{content:"✦";position:absolute;right:16px;bottom:35px;font-size:150px;color:#f2bd71;opacity:.22}.cover.popcorn small,.cover.popcorn span{color:#e2c69b}
+
+.cover.hotel{background:radial-gradient(circle at 75% 20%,#4ea89255,transparent 45%),linear-gradient(145deg,#174c59,#0b223c)}.cover.hotel:after{content:"";position:absolute;inset:20% 10% 16% 44%;border:1px solid #a4e4d244;border-radius:9px;background:repeating-linear-gradient(0deg,transparent 0 30px,#a4e4d222 30px 31px);pointer-events:none}.cover.hotel strong{position:relative;z-index:1}

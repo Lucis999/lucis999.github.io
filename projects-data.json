@@ -46,6 +46,36 @@
     "pending": []
   },
   {
+    "id": "hotel-security",
+    "title": "Hotel Security Decision Support",
+    "theme": "hotel",
+    "cover": "See the path.<br>Choose the defense.",
+    "label": "CYBERSECURITY DECISION SUPPORT",
+    "category": "Security & Decision Analytics",
+    "status": "Live interactive prototype",
+    "course": "Academic security architecture · Portfolio extension",
+    "summary": "Trace five hotel security scenarios, compare original and improved defenses, and prioritize controls within a limited budget.",
+    "skills": [
+      "Network segmentation",
+      "RBAC",
+      "Risk modeling",
+      "Interactive simulation"
+    ],
+    "overview": "A browser-local decision-support prototype translates a hotel security architecture case into a multi-floor hotel and synchronized network map. A shared scenario timeline explains entry points, propagation, containment and conditional recovery. A budget optimizer and editable access policy make control trade-offs inspectable.",
+    "sections": [
+      {
+        "title": "Problem and approach",
+        "text": "How can a hotel explain incident impact and prioritize security improvements without hiding the assumptions behind a risk score? Five synthetic scenarios connect visible incident paths with selected defenses and budget-constrained control choices."
+      },
+      {
+        "title": "Evidence and limitations",
+        "text": "The academic report and presentation are available as privacy-redacted PDFs. Layouts, costs, effectiveness and numerical results are illustrative extensions; no live attacks, real customer data or measured security outcomes are claimed."
+      }
+    ],
+    "contribution": "The original security plan was a collaborative academic project. The portfolio extension presents a working simulation, transparent assumptions and privacy-safe evidence; individual authorship of every original component is not claimed.",
+    "pending": []
+  },
+  {
     "id": "eeg",
     "title": "EEG Signal Classification",
     "theme": "eeg",
