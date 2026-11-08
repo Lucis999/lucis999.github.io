@@ -263,6 +263,27 @@
     "pending": []
   },
   {
+    "id": "nfe-security",
+    "title": "NFE Security Lab",
+    "theme": "nfe",
+    "cover": "A request.<br>A rule.<br>A decision.",
+    "label": "ANIMATED RESEARCH VISUALIZATION",
+    "category": "Security & Research Visualization",
+    "status": "Live · Animated academic review",
+    "course": "Academic review · Research visualization",
+    "summary": "Turn a security research review into animated understanding: follow a request, inspect an access decision, and test isolation rules.",
+    "skills": [
+      "Academic review",
+      "NFV security",
+      "Policy visualization",
+      "Interactive experiments"
+    ],
+    "overview": "An educational visualization of NFV security orchestration, developed from the Group L academic review of Pattaranantakul et al. (2017).",
+    "sections": [],
+    "contribution": "Animated portfolio reconstruction and browser-local experiments; original research and academic review authorship are attributed separately.",
+    "pending": []
+  },
+  {
     "id": "cgi",
     "title": "CGI Equity Valuation",
     "theme": "equity",
