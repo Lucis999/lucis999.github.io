@@ -74,3 +74,6 @@ updateProjectShells(root,projects);
 
 // Attach one shared, progressively enhanced project transition to every portfolio page.
 for(const relative of fs.readdirSync(dist,{recursive:true}).filter(x=>x.endsWith('.html'))){const file=path.join(dist,relative);let html=fs.readFileSync(file,'utf8');if(html.includes('project-transitions.js'))continue;const prefix=path.relative(path.dirname(file),dist).replaceAll('\\','/');html=html.replace('</body>',`<script defer src="${prefix?prefix+'/':''}project-transitions.js"></script></body>`);fs.writeFileSync(file,html);}
+
+// Refresh the shared entry script on the two project-gallery pages.
+for(const name of ['index.html','projects.html']){const f=path.join(dist,name);let h=fs.readFileSync(f,'utf8');h=h.replace(/(src="project-transitions\.js)(?:\?[^"]*)?"/g,'$1?v=forensics-entry"');fs.writeFileSync(f,h);}
