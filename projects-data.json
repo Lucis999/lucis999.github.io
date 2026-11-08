@@ -221,6 +221,27 @@
     "pending": []
   },
   {
+    "id": "digital-forensics",
+    "title": "Digital Forensics Lab",
+    "theme": "forensics",
+    "cover": "A name<br>can lie.",
+    "label": "FILE SIGNATURE INVESTIGATION",
+    "category": "Security & Investigation",
+    "status": "Live · Browser-local lab",
+    "course": "Digital forensics · Interactive portfolio project",
+    "summary": "Identify disguised files from their bytes, investigate missing extensions and export verified copies using two safe, reproducible examples.",
+    "skills": [
+      "File signatures",
+      "Hex inspection",
+      "SHA-256",
+      "Evidence reporting"
+    ],
+    "overview": "A browser-local investigation lab that compares file extensions with binary signatures. Explore a PDF disguised as JPG and a playable synthetic MP3 without an extension; export unchanged copies and verify their hashes.",
+    "sections": [],
+    "contribution": "Interactive lab implementation, reproducible synthetic examples, explanatory detection results and end-to-end verification.",
+    "pending": []
+  },
+  {
     "id": "cgi",
     "title": "CGI Equity Valuation",
     "theme": "equity",

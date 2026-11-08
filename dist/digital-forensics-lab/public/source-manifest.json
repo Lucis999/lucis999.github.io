@@ -48,5 +48,13 @@
     "name": "INCS712-Demo Report_updated.doc",
     "sha256": "e99d54253456d291766133ed9274498ed13d5898b5843c0c99769c013fb6979d",
     "classification": "historical original attachment"
+  },
+  {
+    "name": "INCS712-Technical-Report.pdf",
+    "sha256": "d68cee41c691852b8152973a6dd453a9542443fb89bd51281f7dd461ff1779fb",
+    "classification": "PDF conversion of historical original report; no content edits",
+    "source": "INCS712-Demo Report_updated.doc",
+    "sourceSHA256": "e99d54253456d291766133ed9274498ed13d5898b5843c0c99769c013fb6979d",
+    "pages": 10
   }
 ]

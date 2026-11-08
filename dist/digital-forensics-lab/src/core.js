@@ -47,6 +47,6 @@ export async function analyze(name,bytes,origin='user upload'){
  const result={name,size:data.length,origin,sha256,extension,status,detection,recoveredName:detection.ext.length?base+'.recovered.'+detection.ext[0]:null,bytes:data};
  return {...result,explanation:explain(result)};
 }
-export function report(items,caseName,notes){return {schemaVersion:1,caseName,notes,createdAt:new Date().toISOString(),method:'Local signature triage; not full format validation or forensic acquisition.',sourceLimit:'9 original screenshots and legacy Technical Report available. Paper, PPT and 4 screenshots unavailable; historical claims are not independently verified.',results:items.map(({bytes,...r})=>r)};}
+export function report(items,caseName,notes){return {schemaVersion:1,caseName,notes,createdAt:new Date().toISOString(),method:'Local signature triage; not full format validation or forensic acquisition.',sourceLimit:'Original Technical Report converted to PDF; 9 standalone original screenshots available. Paper and PPT unavailable. Synthetic results are separate from historical evidence.',results:items.map(({bytes,...r})=>r)};}
 export function csv(items){const q=v=>'"'+String(/^[=+@-]/.test(String(v))?"'"+v:v).replace(/"/g,'""')+'"';return ['name,type,status,bytes,sha256,origin,reason,observed_header,expected_header',...items.map(r=>[r.name,r.detection.type,r.status,r.size,r.sha256,r.origin,r.explanation.reason,r.explanation.observedHeader,r.explanation.expectedHeader??''].map(q).join(','))].join('\r\n');}
 

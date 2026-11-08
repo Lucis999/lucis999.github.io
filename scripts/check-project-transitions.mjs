@@ -8,5 +8,5 @@ for(const opts of [{ctrl:true},{target:'_blank'},{download:true},{paused:true}])
 assert(!probe('https://other.example/hotel-security/').blocked);passed++;
 assert(!probe('projects.html#section').blocked);passed++;
 const data=JSON.parse(fs.readFileSync(new URL('../projects-data.json',import.meta.url)));assert.deepEqual(data.slice(0,6).map(x=>x.id),['road-safety','eeg','home-affordability','oil','hotel-security','movie-night']);passed++;
-for(const name of ['index.html','projects.html']){const html=fs.readFileSync(new URL('../dist/'+name,import.meta.url),'utf8'),links=[...html.matchAll(/class="gallery-card" href="([^"]+)"/g)].map(x=>x[1]);assert.deepEqual(links,['project-road-safety.html','eeg-br41n/','project-home-affordability.html','project-oil.html','hotel-security/','movie-night/','cryptography/']);passed++;}
+for(const name of ['index.html','projects.html']){const html=fs.readFileSync(new URL('../dist/'+name,import.meta.url),'utf8'),links=[...html.matchAll(/class="gallery-card" href="([^"]+)"/g)].map(x=>x[1]);assert.deepEqual(links,['project-road-safety.html','eeg-br41n/','project-home-affordability.html','project-oil.html','hotel-security/','movie-night/','cryptography/','digital-forensics-lab/']);passed++;}
 console.log(`${passed} transition safety and project-order checks passed.`);

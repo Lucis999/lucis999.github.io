@@ -51,3 +51,5 @@ body:has(.road-feature) .project-pagination a{min-width:0;overflow-wrap:anywhere
 .cover.hotel{background:radial-gradient(circle at 75% 20%,#4ea89255,transparent 45%),linear-gradient(145deg,#174c59,#0b223c)}.cover.hotel:after{content:"";position:absolute;inset:20% 10% 16% 44%;border:1px solid #a4e4d244;border-radius:9px;background:repeating-linear-gradient(0deg,transparent 0 30px,#a4e4d222 30px 31px);pointer-events:none}.cover.hotel strong{position:relative;z-index:1}
 
 .cover.cipher{background:radial-gradient(circle at 75% 18%,#56d9dd33,transparent 50%),linear-gradient(145deg,#173d58,#0a192d)}.cover.cipher strong{position:relative;z-index:1;font-size:45px}.cover.cipher:after{content:"{ }";position:absolute;right:20px;bottom:50px;font:120px monospace;color:#8ce3d823;letter-spacing:-20px}.cover.cipher span{color:#9de5d5}
+
+.cover.forensics{background:linear-gradient(145deg,#214a51,#0e2839)}.cover.forensics strong{color:#b5f3de}
