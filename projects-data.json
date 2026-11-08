@@ -242,6 +242,27 @@
     "pending": []
   },
   {
+    "id": "websocket-security",
+    "title": "WebSocket Security Lab",
+    "theme": "websocket",
+    "cover": "A message.<br>A question of trust.",
+    "label": "REAL-TIME MESSAGING & DEFENSE",
+    "category": "Cybersecurity & Trust",
+    "status": "Live · Interactive security lab",
+    "course": "Real-time systems · Security exploration",
+    "summary": "Watch six messaging scenarios, locate the attacker and compare defenses. Then take control of a safe, browser-local conversation.",
+    "skills": [
+      "Threat modeling",
+      "Protocol analysis",
+      "Interactive visualization",
+      "Security controls"
+    ],
+    "overview": "A guided reconstruction inspired by a 2022 group instant-messenger presentation, with six synthetic scenarios and session-driven analytics.",
+    "sections": [],
+    "contribution": "New interactive portfolio reconstruction and guided educational simulations. Historical individual contributions are not inferred.",
+    "pending": []
+  },
+  {
     "id": "cgi",
     "title": "CGI Equity Valuation",
     "theme": "equity",
