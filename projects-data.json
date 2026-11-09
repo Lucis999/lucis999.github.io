@@ -284,6 +284,27 @@
     "pending": []
   },
   {
+    "id": "text-mining",
+    "title": "Annual Report Text Mining",
+    "theme": "textmining",
+    "cover": "Reading<br>between the words.",
+    "label": "NLP & TEXT ANALYTICS",
+    "category": "Data & Statistics",
+    "status": "Live interactive case study",
+    "course": "Group coursework · Interactive portfolio extension",
+    "summary": "Explore 2020–2025 annual-report keywords, compare TF-IDF and Word2Vec retrieval, and inspect source-grounded relevance reviews.",
+    "skills": [
+      "Python / NLP",
+      "TF-IDF & Word2Vec",
+      "Similarity retrieval",
+      "Data quality & evaluation"
+    ],
+    "overview": "A text-mining study using four industry examples, with cross-year keyword visualization, controlled representation comparisons and traceable source excerpts.",
+    "sections": [],
+    "contribution": "An interactive extension of a group coursework project, emphasizing reproducible text processing, model comparison and transparent limitations.",
+    "pending": []
+  },
+  {
     "id": "cgi",
     "title": "CGI Equity Valuation",
     "theme": "equity",

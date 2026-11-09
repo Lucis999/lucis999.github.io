@@ -2,15 +2,15 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
-const launchedIds=['road-safety','eeg','home-affordability','oil','hotel-security','movie-night','cryptography','digital-forensics','websocket-security','nfe-security'];
+const launchedIds=['road-safety','eeg','home-affordability','oil','hotel-security','movie-night','cryptography','digital-forensics','websocket-security','nfe-security','text-mining'];
 const escape=s=>s.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 
 export function updateProjectShells(root,projects){
  const dist=path.join(root,'dist');
- const canonical=id=>id==='nfe-security'?'nfe-security/':id==='websocket-security'?'websocket-security/':id==='digital-forensics'?'digital-forensics-lab/':id==='eeg'?'eeg-br41n/':['hotel-security','movie-night','cryptography'].includes(id)?id+'/':'project-'+id+'.html';
+ const canonical=id=>id==='text-mining'?'text-mining/':id==='nfe-security'?'nfe-security/':id==='websocket-security'?'websocket-security/':id==='digital-forensics'?'digital-forensics-lab/':id==='eeg'?'eeg-br41n/':['hotel-security','movie-night','cryptography'].includes(id)?id+'/':'project-'+id+'.html';
  const targets=projects.flatMap(p=>{
   const candidates=['project-'+p.id+'.html'];
-  if(['eeg','hotel-security','movie-night','cryptography','digital-forensics','websocket-security','nfe-security'].includes(p.id))candidates.push(canonical(p.id)+'index.html');
+  if(['eeg','hotel-security','movie-night','cryptography','digital-forensics','websocket-security','nfe-security','text-mining'].includes(p.id))candidates.push(canonical(p.id)+'index.html');
   return candidates.filter(file=>fs.existsSync(path.join(dist,file))).map(file=>({project:p,file}));
  });
  for(const {project:p,file} of targets){
