@@ -305,6 +305,27 @@
     "pending": []
   },
   {
+    "id": "digital-signature",
+    "title": "Digital Signature & Document Trust Lab",
+    "theme": "signature",
+    "cover": "From bytes.<br>To trust.",
+    "label": "DIGITAL SIGNATURES / DOCUMENT INTEGRITY",
+    "category": "Technology & Security",
+    "status": "Live · Browser-local signing & PDF evidence",
+    "course": "Independent portfolio reconstruction",
+    "summary": "Sign a fictional agreement, inspect existing PDF signatures, and explore document bytes, content integrity, certificate claims and identity through interactive visual layers.",
+    "skills": [
+      "WebCrypto / ECDSA",
+      "PDF / CMS inspection",
+      "SHA-256 / byte analysis",
+      "Interactive visualization"
+    ],
+    "overview": "A browser-local learning and document-evidence experience combining guided signing, safe failure experiments and a scroll-driven 3D view of uploaded files. Supported PDF signatures are extracted from the file itself; integrity, certificate trust and identity conclusions remain separate.",
+    "sections": [],
+    "contribution": "Independent portfolio reconstruction of signing workflows, cryptographic checks and interactive document visualization.",
+    "pending": []
+  },
+  {
     "id": "cgi",
     "title": "CGI Equity Valuation",
     "theme": "equity",
@@ -407,62 +428,6 @@
       "Notebook link",
       "Model specifications and comparison results",
       "Evaluation windows and forecast visuals"
-    ]
-  },
-  {
-    "id": "paqt",
-    "title": "PAQT Digital Signature Workflow",
-    "theme": "paqt",
-    "cover": "From draft<br>to signed.",
-    "label": "DIGITAL SIGNATURE WORKFLOW",
-    "category": "Process & Trust",
-    "status": "Team project · Workflow tested",
-    "course": "INCS 870 · Graduate capstone",
-    "summary": "A team project integrating a tested end-to-end signing and email workflow into a startup platform.",
-    "skills": [
-      "Process design",
-      "System integration",
-      "Security controls",
-      "End-to-end testing"
-    ],
-    "overview": "A team project integrating an end-to-end digital-signature workflow into a startup platform. The work included signing and email functionality, and the workflow was tested. This project connects process design, system integration, security considerations and testing within a graduate capstone collaboration.",
-    "sections": [
-      {
-        "title": "Project context",
-        "text": "The collaboration focused on adding a digital signing process to an existing startup platform. PAQT was based in Toronto, while I participated remotely from Vancouver through the NYIT graduate capstone."
-      },
-      {
-        "title": "Workflow and integration",
-        "items": [
-          "Design an end-to-end process for the platform’s digital-signature workflow.",
-          "Integrate signing functionality into the existing platform.",
-          "Include email functionality as part of the overall workflow.",
-          "Test the connected workflow to verify that the process worked end to end."
-        ]
-      },
-      {
-        "title": "Testing and evidence",
-        "text": "The signing and email workflow was tested. The test scenarios, acceptance criteria and detailed results are still to be documented here. No test coverage percentage or broader production-reliability claim is made."
-      },
-      {
-        "title": "Security controls",
-        "text": "Security controls are a focus for documenting the signing integration. The specific controls implemented and their verification evidence still need to be added; no particular cryptographic mechanism, access-control design or compliance certification is claimed on this page."
-      },
-      {
-        "title": "Team contribution",
-        "text": "The workflow was developed as a team project. My exact responsibilities and the components I personally designed, integrated or tested will be added separately from the team’s overall deliverable."
-      },
-      {
-        "title": "Public demonstration",
-        "text": "A public-safe workflow diagram or demo can be added once available. The portfolio presents the process and contributions without exposing credentials, private endpoints, certificates or sensitive deployment configuration."
-      }
-    ],
-    "contribution": "To be added: my responsibilities within the team, the workflow components I worked on, and my contribution to integration and testing.",
-    "pending": [
-      "Individual contribution",
-      "Test scenarios and final validation details",
-      "Verified security controls",
-      "Public-safe workflow diagram or demo link"
     ]
   }
 ]

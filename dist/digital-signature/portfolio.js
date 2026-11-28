@@ -1,0 +1,1 @@
+const signatureMenu=document.querySelector('.site-header .menu-toggle'),signatureLinks=document.querySelector('#navigation');signatureMenu.onclick=()=>{const open=signatureMenu.getAttribute('aria-expanded')!=='true';signatureMenu.setAttribute('aria-expanded',String(open));signatureLinks.classList.toggle('open',open)};
